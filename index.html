@@ -119,13 +119,9 @@ nav .btn{height:50px;font-size:16px}
 .dist{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-bottom:40px}
 .dist b{display:block;font:400 26px "Prata"}
 .dist span{font-size:14px;color:var(--ink2)}
-.map{position:relative;background:#e9e9e7}
-.mapph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;gap:18px;color:var(--ink2);font-size:15px}
-.mapph svg{width:40px;height:40px;stroke:var(--acc);fill:none;stroke-width:1.4}
-.mapph p{max-width:400px}
-.mapph .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.mapph .btn{height:46px;font-size:15px}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(.9) brightness(1.05)}
+.locph{position:relative;overflow:hidden}
+.locph img{position:absolute;inset:0}
+
 /* faq */
 .faq .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
 .faq h2{font-size:60px}
@@ -192,7 +188,7 @@ footer button:hover{color:#fff}
  .strip{grid-template-columns:1fr 1fr;height:auto}.strip>div{height:260px}.strip>div:nth-child(2){grid-column:1/-1;order:-1}
  .wide{height:380px;min-height:0}
  .todo{grid-template-columns:1fr;gap:34px;margin-top:70px}.todo .ph{height:320px}.todo h3{font-size:34px}
- .loc .in{grid-template-columns:1fr}.loc .txt{padding:70px 20px}.map{height:340px}
+ .loc .in{grid-template-columns:1fr}.loc .txt{padding:70px 20px}.locph{height:340px}
  .faq .wrap{grid-template-columns:1fr;gap:28px}.faq h2{font-size:40px}
  summary{padding:20px 22px;font-size:16.5px}details{border-radius:16px;margin-bottom:12px}details p{padding:14px 20px 6px 50px;font-size:16px}details p:before{left:22px;top:12px}
  .contact .wrap{grid-template-columns:1fr;gap:40px}
@@ -201,17 +197,7 @@ footer button:hover{color:#fff}
 .allg .head{padding:14px}
 }
 
-/* cookie banner */
-.ck{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;box-shadow:0 -10px 40px rgba(0,0,0,.1);display:none;font-size:15px;color:var(--ink2)}
-.ck.on{display:block}
-.ck .in{max-width:var(--w);margin:0 auto;padding:22px 128px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.ck p{max-width:760px}
-.ck a{color:var(--ink);text-decoration:underline}
-.ck .btns{display:flex;gap:10px;flex:none}
-.ck .btn{height:46px;font-size:15px;padding:0 24px}
 .t:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-@media(max-width:1200px){.ck .in{padding:20px 56px}}
-@media(max-width:860px){.ck .in{flex-direction:column;align-items:stretch;gap:16px;padding:20px}.ck .btns .btn{flex:1;justify-content:center}}
 </style></head><body>
 
 <nav><div class="wrap">
@@ -381,15 +367,9 @@ footer button:hover{color:#fff}
       <div><b>50 m</b><span>Nearest beach</span></div><div><b>30 min</b><span>Walk to the town centre</span></div>
       <div><b>30 km</b><span>Rijeka Airport</span></div><div><b>50 km</b><span>Rijeka city</span></div>
     </div>
-    <div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Open in Google Maps</a></div>
+    <div><a class="btn dark" href="https://www.google.com/maps/search/?api=1&amp;query=Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Find us on Google Maps</a></div>
   </div>
-  <div class="map" id="map">
-    <div class="mapph" id="mapph">
-      <svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></svg>
-      <p>To see the map, please accept cookies.</p>
-      <div class="btns"><button class="btn dark" id="loadMap">Accept cookies</button></div>
-    </div>
-  </div>
+  <div class="locph t" data-i="121"><img src="img/full/121.jpg" alt="Villa Vaho and its roof terrace seen from directly above"></div>
 </div></section>
 
 <section class="faq" id="faq"><div class="wrap">
@@ -415,13 +395,9 @@ footer button:hover{color:#fff}
 <footer><div class="wrap">
   <a class="logo" href="#top">Villa Vaho</a>
   <span>Novi Vinodolski, Croatia · © 2026 Villa Vaho</span>
-  <div class="links"><a href="privacy.html">Privacy &amp; cookies</a><button id="ckOpen">Cookie settings</button></div>
+  <div class="links"><a href="privacy.html">Privacy policy</a></div>
 </div></footer>
 
-<div class="ck" id="ck" role="dialog" aria-label="Cookies"><div class="in">
-  <p>We use cookies to show you the map on this page. Some cookies are necessary for the website to work, others are used only with your consent. <a href="privacy.html">Learn more</a></p>
-  <div class="btns"><button class="btn" id="ckNo">Reject</button><button class="btn dark" id="ckYes">Accept</button></div>
-</div></div>
 
 <div class="allg" id="allg"><div class="head"><span class="logo">Villa Vaho photos</span><button class="btn" id="closeAll" style="height:44px">Close ✕</button></div><div id="allgIn"></div></div>
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
@@ -454,18 +430,5 @@ $('menuClose').onclick=closeMenu;mnav.querySelectorAll('a').forEach(a=>a.addEven
 const links=[...document.querySelectorAll('nav ul a')];
 const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
 addEventListener('scroll',()=>{let y=scrollY+150,on=links[0];secs.forEach((s,i)=>{if(s.offsetTop<=y)on=links[i]});links.forEach(a=>a.classList.toggle('on',a===on))},{passive:true});
-/* consent + map */
-const KEY='vv-consent',ck=$('ck');
-const get=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
-const set=v=>{try{localStorage.setItem(KEY,v)}catch(e){}};
-const MAP='https://maps.google.com/maps?q=Novi%20Vinodolski%2C%20Croatia&z=14&output=embed';
-function loadMap(){if($('map').querySelector('iframe'))return;const f=document.createElement('iframe');f.src=MAP;f.title='Map of Novi Vinodolski';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';$('map').appendChild(f);$('mapph').style.display='none'}
-function unloadMap(){const f=$('map').querySelector('iframe');if(f)f.remove();$('mapph').style.display=''}
-function apply(v){if(v==='maps')loadMap();else unloadMap()}
-const c=get();if(c)apply(c);else ck.classList.add('on');
-$('ckYes').onclick=()=>{set('maps');apply('maps');ck.classList.remove('on')};
-$('ckNo').onclick=()=>{set('essential');apply('essential');ck.classList.remove('on')};
-$('ckOpen').onclick=()=>ck.classList.add('on');
-$('loadMap').onclick=()=>{set('maps');apply('maps');ck.classList.remove('on')};
 </script>
 </body></html>
