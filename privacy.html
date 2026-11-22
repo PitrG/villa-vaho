@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy &amp; cookies · Villa Vaho</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--ink:#1B1B1B;--ink2:#5E5E5E;--soft:#F4F3F1;--acc:#B9875A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--ink);font:400 17px/1.7 "Manrope",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+header{max-width:820px;margin:0 auto;padding:36px 24px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font:400 26px "Prata";text-decoration:none}
+.back{font:600 15px "Manrope";text-decoration:none;border:1.5px solid var(--ink);border-radius:99px;padding:10px 20px}
+.back:hover{background:var(--ink);color:#fff}
+main{max-width:820px;margin:0 auto;padding:60px 24px 100px}
+h1{font:400 52px/1.1 "Prata";margin-bottom:12px}
+h2{font:400 28px/1.2 "Prata";margin:48px 0 14px}
+p,li{color:var(--ink2);margin-bottom:12px}
+ul{padding-left:22px}
+.upd{font-size:15px;margin-bottom:30px}
+.box{background:var(--soft);border-radius:18px;padding:22px 26px;margin:18px 0}
+.box p{margin:0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:12px 14px;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+tr+tr td{border-top:1px solid #ebe9e5}
+button{font:600 15px "Manrope";border:1.5px solid var(--ink);background:var(--ink);color:#fff;border-radius:99px;padding:11px 20px;cursor:pointer;margin:6px 8px 0 0}
+button.ghost{background:none;color:var(--ink)}
+#state{font-weight:600;color:var(--ink)}
+@media(max-width:700px){h1{font-size:38px}h2{font-size:24px}table{font-size:14px}th,td{padding:10px 8px}}
+</style></head><body>
+<header><a class="logo" href="index.html">Villa Vaho</a><a class="back" href="index.html">Back to the website</a></header>
+<main>
+<h1>Privacy &amp; cookies</h1>
+<p class="upd">Last updated: November 2026</p>
+
+<div class="box"><p>In short: this website does not collect any personal data, has no contact forms, and uses no analytics, tracking or advertising cookies. The only third-party service is the Google Maps map, which loads only if you allow it.</p></div>
+
+<h2>Who runs this website</h2>
+<p>Lana Haynes Hodžić, Villa Vaho, Novi Vinodolski, Croatia<br>Email: <a href="mailto:info@villavaho.com">info@villavaho.com</a> · Phone: <a href="tel:+385917616797">+385 91 761 6797</a></p>
+
+<h2>What happens when you visit</h2>
+<p>When you open the website, your browser automatically sends technical information (such as your IP address, date and time of the visit, the page requested and your browser type) to our hosting provider. This is needed to deliver the website and keep it secure. We do not use this information to identify you, and it is not combined with any other data.</p>
+<p>Fonts and images are served from our own website. No data is sent to Google Fonts or other font services.</p>
+
+<h2>When you contact us</h2>
+<p>If you write to us by email or call us, we use your details only to answer your enquiry and, if you book, to arrange your stay. We keep them only as long as needed for that purpose or as required by law.</p>
+
+<h2 id="maps">Google Maps</h2>
+<p>The map in the location section is provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. It loads only after you click “Load map” or “Allow Google Maps”. Google may then receive your IP address and set cookies on your device, and data may be transferred to Google LLC in the USA. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+<p>The legal basis is your consent (Article 6(1)(a) GDPR). You can withdraw it at any time below.</p>
+
+<h2>Cookies and local storage</h2>
+<table>
+<tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
+<tr><td>vv-consent</td><td>This website (local storage)</td><td>Remembers your choice about Google Maps. Strictly necessary, set only when you make a choice.</td><td>Until you clear your browser data</td></tr>
+<tr><td>Google cookies (e.g. NID)</td><td>Google</td><td>Set by Google Maps, only if you allow the map.</td><td>See Google's policy</td></tr>
+</table>
+<p>Your current choice: <span id="state">not set</span></p>
+<button id="allow">Allow Google Maps</button><button class="ghost" id="deny">Essential only</button>
+
+<h2>Links to other websites</h2>
+<p>This website links to Booking.com, Airbnb and Adriagate, where you can book your stay. When you visit those websites, their own privacy policies apply.</p>
+
+<h2>Your rights</h2>
+<p>Under the GDPR you have the right to access, correct or delete your personal data, to restrict or object to its processing, to data portability, and to withdraw your consent at any time. To use these rights, contact us at <a href="mailto:info@villavaho.com">info@villavaho.com</a>.</p>
+<p>You can also lodge a complaint with the Croatian data protection authority: Agencija za zaštitu osobnih podataka (AZOP), Selska cesta 136, 10000 Zagreb, <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a>.</p>
+</main>
+<script>
+const K='vv-consent',st=document.getElementById('state');
+const get=()=>{try{return localStorage.getItem(K)}catch(e){return null}};
+const set=v=>{try{localStorage.setItem(K,v)}catch(e){}};
+const show=()=>{const v=get();st.textContent=v==='maps'?'Google Maps allowed':v==='essential'?'Essential only':'not set'};
+document.getElementById('allow').onclick=()=>{set('maps');show()};
+document.getElementById('deny').onclick=()=>{set('essential');show()};
+show();
+</script>
+</body></html>

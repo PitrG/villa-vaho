@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Villa Vaho · Novi Vinodolski</title>
-<meta name="description" content="A seventies Mediterranean family house above the Adriatic in Novi Vinodolski, Croatia. Sleeps up to 10, with a walled garden, rooftop terrace and the beach 5 minutes away.">
+<title>Villa Vaho · Novi Vinodolski, Croatia</title>
+<meta name="description" content="Villa Vaho, a modern Mediterranean family house overlooking the Adriatic and the island of Krk in Novi Vinodolski, Croatia. Sleeps up to 10, walled garden, rooftop terrace, 5 minutes from the beach.">
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/prata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{--ink:#1B1B1B;--ink2:#5E5E5E;--line:#E6E6E6;--soft:#F4F3F1;--acc:#B9875A;--w:1440px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+[id]{scroll-margin-top:100px}
+@media(max-width:860px){[id]{scroll-margin-top:70px}}
 body{background:#fff;color:var(--ink);font:400 17.5px/1.6 "Manrope",sans-serif;-webkit-font-smoothing:antialiased}
 img{display:block;width:100%;height:100%;object-fit:cover}
 a{color:inherit;text-decoration:none}
@@ -28,7 +30,15 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:1
 nav ul{display:flex;gap:32px;list-style:none;font:500 16px "Manrope";color:var(--ink2)}
 nav ul a:hover,nav ul a.on{color:var(--ink)}
 nav .btn{height:50px;font-size:16px}
-.menu{display:none}
+.menu{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-right:-10px}
+.menu span{display:block;width:26px;height:12px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:30;display:none;flex-direction:column;padding:24px 20px}
+.mnav.on{display:flex}
+.mnav .top{display:flex;justify-content:space-between;align-items:center;height:46px}
+.mnav .x{background:none;border:0;font-size:30px;cursor:pointer;line-height:1}
+.mnav ul{list-style:none;margin-top:40px}
+.mnav li a{display:block;font:400 34px/1.2 "Prata";padding:10px 0}
+.mnav .btn{margin-top:30px;align-self:flex-start}
 /* hero */
 .hero{padding:24px 0 0}
 .hero .wrap{display:grid;grid-template-columns:1fr 1.45fr;gap:72px;align-items:center;max-width:none;padding-right:0;padding-left:max(128px,calc((100vw - var(--w))/2 + 128px))}
@@ -110,6 +120,11 @@ nav .btn{height:50px;font-size:16px}
 .dist b{display:block;font:400 26px "Prata"}
 .dist span{font-size:14px;color:var(--ink2)}
 .map{position:relative;background:#e9e9e7}
+.mapph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;gap:18px;color:var(--ink2);font-size:15px}
+.mapph svg{width:40px;height:40px;stroke:var(--acc);fill:none;stroke-width:1.4}
+.mapph p{max-width:400px}
+.mapph .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.mapph .btn{height:46px;font-size:15px}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(.9) brightness(1.05)}
 /* faq */
 .faq .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
@@ -126,15 +141,20 @@ details p:before{content:"↳";position:absolute;left:34px;top:18px;color:#999}
 /* contact */
 .contact{}
 .contact .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:60px;align-items:start}
-.person h4{font:400 24px "Prata";margin-bottom:4px}
+.person h4{font:600 20px "Manrope";margin-bottom:4px}
 .person .role{color:var(--ink2);font-size:15px;margin-bottom:18px}
 .person p{font-size:16px;line-height:2}
 .person p span{color:var(--ink2);display:inline-block;width:72px}
+.person a:hover,.legal a:hover{text-decoration:underline}
 .book{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
 .book .btn{height:48px;font-size:15px}
 footer{background:var(--ink);color:#bbb;padding:44px 0;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer .logo{color:#fff;font-size:18px}
+footer a:hover{color:#fff}
+footer nav,footer .links{display:flex;gap:22px;flex-wrap:wrap;position:static;background:none;backdrop-filter:none}
+footer button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
+footer button:hover{color:#fff}
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(15,15,15,.96);z-index:50;display:none;flex-direction:column}
 .lb.on{display:flex}
@@ -156,7 +176,7 @@ footer .logo{color:#fff;font-size:18px}
 @media(max-width:860px){
  body{font-size:17px}.wrap{padding:0 20px}section{padding:76px 0}h2{font-size:38px}.lead{font-size:17px}
  nav .wrap{height:70px}.logo{font-size:19px}nav ul,nav .btn{display:none}
- .menu{display:block;width:26px;height:12px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+ .menu{display:block}
  .hero{padding:6px 0 0}.hero .wrap{grid-template-columns:1fr;gap:34px;padding:0 20px}
  .hero h1{font-size:44px;margin-bottom:18px}.hero .lead{margin-bottom:28px}
  .hero .ph{height:440px;min-height:0;border-radius:4px;overflow:hidden}
@@ -180,20 +200,36 @@ footer .logo{color:#fff;font-size:18px}
  .allg .g{columns:2;padding:0 14px}.allg h4{margin:30px 14px 14px;font-size:24px}.allg .head .logo{font-size:22px!important}
 .allg .head{padding:14px}
 }
+
+/* cookie banner */
+.ck{position:fixed;left:24px;bottom:24px;z-index:60;max-width:430px;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.18);padding:24px 26px;display:none;font-size:15px;color:var(--ink2)}
+.ck.on{display:block}
+.ck h5{font:400 22px "Prata";color:var(--ink);margin-bottom:8px}
+.ck a{color:var(--ink);text-decoration:underline}
+.ck .btns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.ck .btn{height:44px;font-size:14px;padding:0 18px}
+.t:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+@media(max-width:860px){.ck{left:12px;right:12px;bottom:12px;max-width:none;padding:20px}}
 </style></head><body>
 
 <nav><div class="wrap">
-  <a class="logo" href="#">Villa Vaho</a>
-  <ul><li><a class="on" href="#">Home</a></li><li><a href="#house">The House</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#novi">Novi Vinodolski</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="logo" href="#top">Villa Vaho</a>
+  <ul><li><a class="on" href="#top">Home</a></li><li><a href="#house">The House</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#novi">Novi Vinodolski</a></li><li><a href="#location">Location</a></li><li><a href="#faq">FAQ</a></li></ul>
   <a class="btn dark" href="#contact">Get in touch</a>
-  <span class="menu"></span>
+  <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
 </div></nav>
 
-<header class="hero"><div class="wrap">
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="top"><a class="logo" href="#top">Villa Vaho</a><button class="x" id="menuClose" aria-label="Close menu">✕</button></div>
+  <ul><li><a href="#top">Home</a></li><li><a href="#house">The House</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#novi">Novi Vinodolski</a></li><li><a href="#location">Location</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="btn dark" href="#contact">Get in touch</a>
+</div>
+
+<header class="hero" id="top"><div class="wrap">
   <div>
     <div class="where">Novi Vinodolski · Croatia</div>
-    <h1>A house above the <em>Adriatic</em></h1>
-    <p class="lead">Built into the hillside in the early seventies, Villa Vaho looks out over the sea to the island of Krk. A walled garden, a huge rooftop terrace and the beach just five minutes down the hill.</p>
+    <h1>A villa overlooking the <em>Adriatic</em></h1>
+    <p class="lead">On the northern edge of Novi Vinodolski, built into the slope that heads down to the sea, with a commanding view of the Adriatic and the island of Krk. The beach is a five-minute walk away.</p>
     <a class="btn dark" href="#house">Explore the house</a>
   </div>
   <div class="ph"><img src="img/full/136.jpg" alt="The Kvarner bay and the island of Krk seen from above Villa Vaho"></div>
@@ -202,9 +238,9 @@ footer .logo{color:#fff;font-size:18px}
 <section class="welcome" id="welcome"><div class="wrap">
   <div><h2>A modern Mediterranean house, made for <em>families</em></h2></div>
   <div>
-    <p>Villa Vaho sits on the northern edge of the small town of Novi Vinodolski. The house was built in the early 70s in a modern Mediterranean style, on two levels, set into the slope that runs down to the sea.</p>
-    <p>Every level has its own outdoor space and its own view of the Adriatic. Fig, almond, palm and bay trees shade the garden, which is fully walled and safe for young children.</p>
-    <p>It is ideal for families with children, or indeed two families travelling together.</p>
+    <p>Villa Vaho was designed and built by an architect, the owner's father, in the late 60s and completed in the early 70s. It sits a 30-minute walk along the coast from the centre of Novi Vinodolski, in an area pioneered by the holiday homes and villas of professional families, mostly from Zagreb.</p>
+    <p>The house is built into the slope on two levels, which divides it into two distinct apartments. The front and back gardens are full of mature trees, including figs, pomegranates and a large almond tree, with shrubs and aromatic plants all around. The garden is walled, safe and secure for young children and pets.</p>
+    <p>The villa is ideal for families with children, or indeed two families.</p>
     <div class="stats">
       <div><b>10</b><span>guests</span></div>
       <div><b>4</b><span>bedrooms</span></div>
@@ -214,60 +250,60 @@ footer .logo{color:#fff;font-size:18px}
   </div>
 </div></section>
 
-<div class="wide t" data-i="132"><img src="img/full/132.jpg" alt="Villa Vaho seen from above, in its garden"></div>
+<div class="wide t" data-i="132" tabindex="0" role="button" aria-label="Open photo"><img src="img/full/132.jpg" alt="Villa Vaho seen from above, surrounded by its garden"></div>
 
 <section class="house" id="house"><div class="wrap">
   <div class="row">
     <div class="pics">
-      <div class="t" data-i="28"><img src="img/full/28.jpg" alt=""></div>
-      <div class="side"><div class="t" data-i="12"><img src="img/th/12.jpg" alt=""></div><div class="t" data-i="37"><img src="img/th/37.jpg" alt=""></div></div>
+      <div class="t" data-i="24"><img src="img/full/24.jpg" alt="Balcony terrace of the upper apartment with a view of the sea and Krk"></div>
+      <div class="side"><div class="t" data-i="12"><img src="img/th/12.jpg" alt="Dining room in the upper apartment"></div><div class="t" data-i="37"><img src="img/th/37.jpg" alt="Double bedroom with patterned wallpaper"></div></div>
     </div>
     <div>
-      <h3>Big table, bigger view</h3>
-      <p>The upper level has three double bedrooms, a kitchen, a bathroom, a separate WC and a storage room. At its heart is a large dining room that opens onto a long balcony overlooking the Adriatic and the island of Krk.</p>
-      <p>The kitchen leads out to an outdoor dining area and a barbecue, under mature fig and almond trees.</p>
-      <ul class="ticks"><li>Sleeps 6 in 3 double bedrooms</li><li>Dishwasher, microwave and washing machine</li><li>Sea-view balcony off the living room</li></ul>
+      <h3>The upper apartment</h3>
+      <p>Three double bedrooms, all with air conditioning, and a large living area that opens onto a balcony terrace. Every room overlooks the sea.</p>
+      <p>There is a fully equipped kitchen with a dishwasher and washing machine, an indoor dining area, a bathroom, a separate toilet and a storage room. The kitchen door leads to the front garden, an outdoor eating area and a built-in barbecue.</p>
+      <ul class="ticks"><li>Sleeps 6</li><li>3 double bedrooms with AC</li><li>Sea view from every room</li><li>Balcony terrace</li></ul>
     </div>
   </div>
   <div class="row rev">
     <div class="pics">
-      <div class="t" data-i="91"><img src="img/full/91.jpg" alt=""></div>
-      <div class="side"><div class="t" data-i="86"><img src="img/th/86.jpg" alt=""></div><div class="t" data-i="77"><img src="img/th/77.jpg" alt=""></div></div>
+      <div class="t" data-i="70"><img src="img/full/70.jpg" alt="Table under the vine-covered pergola"></div>
+      <div class="side"><div class="t" data-i="91"><img src="img/th/91.jpg" alt="Open-plan living room of the lower apartment"></div><div class="t" data-i="77"><img src="img/th/77.jpg" alt="Double bedroom in the lower apartment"></div></div>
     </div>
     <div>
-      <h3>Lunch under the vines</h3>
-      <p>The lower level is a smaller, self-contained apartment with a double bedroom and a large open-plan space for cooking and dining, which can also be used for extra sleeping.</p>
-      <p>In front of it, beneath a vine-clad pergola, there is an outdoor dining area and places to lounge under palm, fig and bay trees, again with a view of the sea.</p>
-      <ul class="ticks"><li>Sleeps 2 adults + 2 children</li><li>Own entrance and kitchen</li><li>Shaded terrace under the pergola</li></ul>
+      <h3>The lower apartment</h3>
+      <p>A self-contained apartment with a large open-plan living room, kitchen and dining area that can also be used for extra sleeping, plus a double bedroom and a bathroom. It has its own air conditioning.</p>
+      <p>The apartment opens onto a lawn and a paved table area under a wooden pergola covered with grapevine. Again, there is a fantastic view of the Adriatic.</p>
+      <ul class="ticks"><li>Sleeps up to 4</li><li>Own entrance and kitchen</li><li>Air conditioning</li><li>Vine pergola and lawn</li></ul>
     </div>
   </div>
   <div class="row">
     <div class="pics">
-      <div class="t" data-i="107"><img src="img/full/107.jpg" alt=""></div>
-      <div class="side"><div class="t" data-i="109"><img src="img/th/109.jpg" alt=""></div><div class="t" data-i="103"><img src="img/th/103.jpg" alt=""></div></div>
+      <div class="t" data-i="105"><img src="img/full/105.jpg" alt="Lounge area and covered pergola on the roof terrace"></div>
+      <div class="side"><div class="t" data-i="63"><img src="img/th/63.jpg" alt="Loungers and table in the garden"></div><div class="t" data-i="65"><img src="img/th/65.jpg" alt="Built-in barbecue in the garden"></div></div>
     </div>
     <div>
-      <h3>Up on the roof, down in the garden</h3>
-      <p>Above the upper level there is a huge terrace with a pergola and dining area, ideal for sunbathing, relaxing and long evenings with the view.</p>
-      <p>Around the house, a large walled garden with hammocks, loungers and parasols keeps little ones safe while the grown-ups read in the shade.</p>
-      <ul class="ticks"><li>Rooftop dining and lounge area</li><li>Walled, child-safe garden</li><li>Hammocks, loungers and parasols</li></ul>
+      <h3>Roof terrace and garden</h3>
+      <p>Above the upper level there is a huge terrace with a covered pergola and dining area, ideal for sunbathing, relaxing and enjoying the views.</p>
+      <p>Down in the walled garden you'll find hammocks, loungers and parasols, a built-in barbecue and plenty of shade under the fig and almond trees.</p>
+      <ul class="ticks"><li>Covered rooftop dining</li><li>Built-in barbecue</li><li>Hammocks, loungers and parasols</li><li>Parking for 3 cars</li></ul>
     </div>
   </div>
 </div></section>
 
-<section class="band"><img src="img/full/120.jpg" alt="View from above Villa Vaho over the Kvarner bay">
-  <div class="q"><blockquote>“Crystal-clear sea in front, mountains behind, and Krk on the horizon.”</blockquote></div>
+<section class="band"><img src="img/full/120.jpg" alt="The Kvarner bay and the island of Krk from above the villa">
+  <div class="q"><blockquote>Crystal-clear sea in front, mountains behind, and Krk on the horizon.</blockquote></div>
 </section>
 
 <section class="glance"><div class="wrap">
   <div class="center"><h2>Good to know</h2></div>
   <div class="grid">
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M3 18c3-2 6-2 9 0s6 2 9 0M3 13c3-2 6-2 9 0s6 2 9 0"/></svg><h4>Local beach</h4><p>The nearest beach is 50 metres down the hill. Along the 6 km coastline there are rocky, pebble and man-made beaches, and one sandy beach in town.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h4>Centrally located</h4><p>2 km before the west entrance to town, or 20 minutes on foot along the seashore. About 500 m from the main E65 coastal road.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 16h20M4 16v4M20 16v4M4 16V8h16v8M8 12h8"/></svg><h4>Accommodation</h4><p>Sleeps up to 10. Upstairs 6 guests, downstairs 2 adults and 2 children. Free Wi-Fi, several AC units, dishwasher and washing machine.</p></div>
-    <div class="gl photo t" data-i="68"><img src="img/th/68.jpg" alt="The garden cat"></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 20 9 8l4 6 3-4 6 10z"/></svg><h4>Experience it</h4><p>Crystal-clear sea, mountain and forest walks, boat trips to nearby islands, cultural visits and plenty of restaurants and bars.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 13l20-6-6 13-3-6z"/></svg><h4>Nearest airport</h4><p>Rijeka Airport on the island of Krk is 30 km away. Pula is 150 km and Zagreb 200 km from the house.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M3 18c3-2 6-2 9 0s6 2 9 0M3 13c3-2 6-2 9 0s6 2 9 0"/></svg><h4>Local beach</h4><p>The nearest beach is 50 metres down the hill, about five minutes away. Along the 6 km coastline there are rocky, pebble and man-made beaches, and one sandy beach in town.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h4>Centrally located</h4><p>2 km before the west entrance to town, or a 30-minute walk along the seashore. Easily reached from the main E65 road, about 500 m from the turn-off.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 16h20M4 16v4M20 16v4M4 16V8h16v8M8 12h8"/></svg><h4>Accommodation</h4><p>Sleeps 8 to 10. The upper apartment takes 6 guests, the lower one 2 adults and 2 children. Dishwasher, washing machine, microwave, free Wi-Fi and several AC units.</p></div>
+    <div class="gl photo t" data-i="68"><img src="img/th/68.jpg" alt="A cat resting in the garden"></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 20 9 8l4 6 3-4 6 10z"/></svg><h4>Experience it</h4><p>Crystal-clear sea, mountain and forest walks, boat tours to nearby islands, organised visits to cultural sites, and plenty of restaurants and bars.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 13l20-6-6 13-3-6z"/></svg><h4>Nearest airport</h4><p>Rijeka Airport on the island of Krk is 30 km from the house. Pula airport is 150 km away and Zagreb airport 200 km.</p></div>
   </div>
 </div></section>
 
@@ -275,16 +311,16 @@ footer .logo{color:#fff;font-size:18px}
   <div class="center"><h2>Have a look around</h2>
   <p class="lead">Terrazzo floors, patterned wallpaper, shelves full of books and shells, and the sea in almost every window.</p></div>
   <div class="mosaic">
-    <div class="t" data-i="117"><img src="img/full/117.jpg" alt=""></div>
+    <div class="t" data-i="117"><img src="img/full/117.jpg" alt="Roof terrace with a parasol and a view of Krk"></div>
     <div class="col">
-      <div class="t" data-i="57"><img src="img/th/57.jpg" alt=""></div>
-      <div class="two"><div class="t" data-i="33"><img src="img/th/33.jpg" alt=""></div><div class="t" data-i="18"><img src="img/th/18.jpg" alt=""></div></div>
+      <div class="t" data-i="57"><img src="img/th/57.jpg" alt="Breakfast table in the garden"></div>
+      <div class="two"><div class="t" data-i="33"><img src="img/th/33.jpg" alt="Sitting room with books and a painting"></div><div class="t" data-i="31"><img src="img/th/31.jpg" alt="Living room of the upper apartment"></div></div>
     </div>
   </div>
   <div class="row3">
-    <div class="t" data-i="70"><img src="img/th/70.jpg" alt=""></div>
-    <div class="t" data-i="38"><img src="img/th/38.jpg" alt=""></div>
-    <div class="t" data-i="137"><img src="img/th/137.jpg" alt=""></div>
+    <div class="t" data-i="97"><img src="img/th/97.jpg" alt="Lawn and pergola of the lower apartment"></div>
+    <div class="t" data-i="38"><img src="img/th/38.jpg" alt="Bedroom with a view of the garden"></div>
+    <div class="t" data-i="109"><img src="img/th/109.jpg" alt="Lounge sofas on the roof terrace"></div>
   </div>
   <div class="gbtn"><button class="btn" id="openAll">View more photos</button></div>
 </div></section>
@@ -297,7 +333,7 @@ footer .logo{color:#fff;font-size:18px}
     <div><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M8 5.5h2"/></svg>Dishwasher</div>
     <div><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="12" cy="13" r="4"/><path d="M8 6h2"/></svg>Washing machine</div>
     <div><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><rect x="6" y="9" width="9" height="6"/><path d="M18 10v4"/></svg>Microwave</div>
-    <div><svg viewBox="0 0 24 24"><path d="M4 10h16a8 8 0 0 1-16 0zM8 18l-2 3M16 18l2 3M9 3c0 2 2 2 2 4M13 3c0 2 2 2 2 4"/></svg>Barbecue</div>
+    <div><svg viewBox="0 0 24 24"><path d="M4 10h16a8 8 0 0 1-16 0zM8 18l-2 3M16 18l2 3M9 3c0 2 2 2 2 4M13 3c0 2 2 2 2 4"/></svg>Built-in barbecue</div>
     <div><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M3 21h18M9 21v-6h6v6"/></svg>Walled garden</div>
     <div><svg viewBox="0 0 24 24"><path d="M2 8c5 6 15 6 20 0M2 8v2M22 8v2M5 11l-1 10M19 11l1 10"/></svg>Hammocks</div>
     <div><svg viewBox="0 0 24 24"><path d="M5 17h14l-1.5-6h-11zM7 17v2M17 17v2M8 11l1.5-4h5L16 11"/></svg>Parking for 3 cars</div>
@@ -308,28 +344,28 @@ footer .logo{color:#fff;font-size:18px}
 <section class="story" id="novi"><div class="wrap">
   <div class="top">
     <div><h2>A little town with a <em>long story</em></h2></div>
-    <p>Novi sits 50 km south of Rijeka, on the hill above a small harbour, at the sea end of a long valley that once fed the whole area and was known for its vines. Today it's a relaxed, family-friendly town, and local wine is still poured in its shops and restaurants.</p>
+    <p>Novi Vinodolski lies 50 km south of Rijeka. The town grew up on the hill above a small harbour, at the sea end of a long valley that once fed the local people and was known for its vines. Wine is still made here, and local wine is sold and served in shops and restaurants. Today the area is all about family holidays, with two marinas welcoming visitors by boat.</p>
   </div>
   <div class="facts">
-    <div class="fact"><div class="yr">Vino·dol</div><h4>The vine valley</h4><p>The town takes its name from the valley behind it, Vialis vinearia: “vino” for wine, “dol” for valley.</p></div>
-    <div class="fact"><div class="yr">1288</div><h4>The Vinodol Code</h4><p>Written here by the noble Frankopan family in old Glagolitic script, it is one of the oldest legal documents in Croatian history.</p></div>
-    <div class="fact"><div class="yr">1800s</div><h4>Habsburg holidays</h4><p>Drawn by the clear sea and nearby mountains, 19th-century nobles began building holiday homes here, and tourism was born.</p></div>
-    <div class="fact"><div class="yr">1970s</div><h4>Villa Vaho is built</h4><p>The tradition continued in the 60s and 70s, when the house was built on the slope above the sea, where it still stands.</p></div>
+    <div class="fact"><div class="yr">Vino·dol</div><h4>The vine valley</h4><p>The town takes its name from the valley behind it, Vialis vinearia: “vino” for wine and “dol” for valley.</p></div>
+    <div class="fact"><div class="yr">1288</div><h4>The Vinodol Code</h4><p>Created here by the noble Frankopan family and written in old Glagolitic script, it is one of the oldest legal documents in Croatian history.</p></div>
+    <div class="fact"><div class="yr">1800s</div><h4>Habsburg holidays</h4><p>The Habsburgs took over the region in the 16th century. In the 19th, nobles drawn by the clear sea and nearby mountains began building holiday homes here.</p></div>
+    <div class="fact"><div class="yr">1960s</div><h4>A new holiday coast</h4><p>The tradition continued in the 60s and 70s, when professional families could buy land and build holiday homes. Villa Vaho dates from this time.</p></div>
   </div>
   <div class="strip">
-    <div class="t" data-i="124"><img src="img/th/124.jpg" alt=""></div>
-    <div class="t" data-i="129"><img src="img/full/129.jpg" alt=""></div>
-    <div class="t" data-i="138"><img src="img/th/138.jpg" alt=""></div>
+    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Pebble beach and clear water near Novi Vinodolski"></div>
+    <div class="t" data-i="126"><img src="img/full/126.jpg" alt="The coastline of Novi Vinodolski from above"></div>
+    <div class="t" data-i="town"><img src="img/th/town.jpg" alt="Novi Vinodolski harbour and old town"></div>
   </div>
   <div class="todo">
-    <div class="ph t" data-i="112"><img src="img/full/112.jpg" alt=""></div>
+    <div class="ph t" data-i="112"><img src="img/full/112.jpg" alt="Two chairs on the terrace facing the sea"></div>
     <div>
       <h3>Things to do nearby</h3>
       <dl>
-        <dt>On the water</dt><dd>Swimming, snorkelling, diving, sailing and boat tours to explore the coastline and the nearby islands.</dd>
-        <dt>History on the doorstep</dt><dd>The ruins of the Pauline monastery are 1.8 km away and the Frankopan tower 6.8 km. In town: the museum and a summer programme of concerts, festivals and exhibitions.</dd>
-        <dt>Further afield</dt><dd>The island of Krk and the Biserujka cave (37 km), national parks and lakes, Mount Učka, Istria, and even Venice, three hours away.</dd>
-        <dt>At the table</dt><dd>Grilled fish and meat, Mediterranean and Italian cooking, and hunters' lodges serving game in the hills.</dd>
+        <dt>On the water</dt><dd>Swimming, snorkelling, diving, sailing and jet skiing, and boat tours along the coast and to the nearby islands.</dd>
+        <dt>History on the doorstep</dt><dd>Frankopan castles and churches all around, the ruins of the Pauline monastery 1.8 km away, the town museum and a summer programme of concerts, festivals, town tours and exhibitions.</dd>
+        <dt>Further afield</dt><dd>The island of Krk, 20 km away, known for its heritage, wine and natural beauty. National parks and lakes, Mount Učka, Istria, and even Venice, only three hours by car.</dd>
+        <dt>At the table</dt><dd>Grilled fish and meat, Mediterranean and Italian cooking, and hunters' lodges in the hills serving game.</dd>
       </dl>
     </div>
   </div>
@@ -337,55 +373,98 @@ footer .logo{color:#fff;font-size:18px}
 
 <section class="loc" id="location"><div class="in">
   <div class="txt">
-    
     <h2>Getting here</h2>
-    <p class="lead">The house is just off the E65 coastal road, 2 km before the western entrance to Novi Vinodolski. In town you'll find 4 supermarkets, a pharmacy, banks, a bus station and a small food market.</p>
+    <p class="lead">The house is 2 km before the western entrance to Novi Vinodolski, about 500 m from the turn-off on the main E65 coastal road. A small, well-stocked shop is a 10-minute walk away, and the town has four supermarkets, a pharmacy, banks, a bus station and a small food market.</p>
     <div class="dist">
-      <div><b>50 m</b><span>Nearest beach</span></div><div><b>10 min</b><span>Local shop on foot</span></div>
+      <div><b>50 m</b><span>Nearest beach</span></div><div><b>30 min</b><span>Walk to the town centre</span></div>
       <div><b>30 km</b><span>Rijeka Airport</span></div><div><b>50 km</b><span>Rijeka city</span></div>
     </div>
-    <div><a class="btn" href="https://maps.google.com/?q=Novi+Vinodolski" target="_blank" rel="noopener">Open maps</a></div>
+    <div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Open in Google Maps</a></div>
   </div>
-  <div class="map"><iframe loading="lazy" src="https://maps.google.com/maps?q=Novi%20Vinodolski&z=14&output=embed" title="Map of Novi Vinodolski"></iframe></div>
+  <div class="map" id="map">
+    <div class="mapph" id="mapph">
+      <svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></svg>
+      <p>The map is provided by Google Maps. When you load it, Google may set cookies and receive your IP address. <a href="privacy.html#maps" style="text-decoration:underline">Learn more</a></p>
+      <div class="btns"><button class="btn dark" id="loadMap">Load map</button></div>
+    </div>
+  </div>
 </div></section>
 
 <section class="faq" id="faq"><div class="wrap">
   <h2>Frequently asked</h2>
   <div>
-    <details open><summary>How long can we stay?</summary><p>In season you can stay as long as you like. In spring and autumn, prices are negotiable for stays longer than two weeks.</p></details>
-    <details><summary>What is the minimum stay?</summary><p>5 days is the minimum rental.</p></details>
-    <details><summary>How many does the house sleep?</summary><p>Up to 10 people: 8 sleeping in separate rooms, while 2 (usually children) sleep on the sofa beds in the open living room.</p></details>
-    <details><summary>How much is it to rent the whole house?</summary><p>Prices vary with the season, from 110 to 220 euros a night for the whole house. Contact us with your dates for an exact price.</p></details>
+    <details open><summary>How long can we stay?</summary><p>In season you can stay as long as you like, but there is no price reduction. In spring and autumn, prices are negotiable for stays longer than two weeks.</p></details>
+    <details><summary>What is the minimum stay?</summary><p>The minimum rental is 6 days.</p></details>
+    <details><summary>How many does the house sleep?</summary><p>Up to 10 people. Eight sleep in separate rooms, while two, usually children, sleep on the sofa beds in the open living room.</p></details>
+    <details><summary>How much is it to rent the whole house?</summary><p>Prices vary with the season, from 250 to 350 euros for the whole house. Please contact us with your dates for the exact price.</p></details>
     <details><summary>Is there car parking?</summary><p>Yes, free parking for 3 cars on the street in front of the house.</p></details>
-    <details><summary>Can we bring our pets?</summary><p>Dogs are allowed, with an additional charge of 5 euros per dog.</p></details>
+    <details><summary>Can we bring our pets?</summary><p>Dogs are allowed, with an additional charge of 5 euros per dog. The garden is walled and safe for pets.</p></details>
+    <details><summary>How do we book?</summary><p>You can book on <a href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener" style="text-decoration:underline">Booking.com</a> or <a href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener" style="text-decoration:underline">Airbnb</a>, or contact us directly by phone or email.</p></details>
   </div>
 </div></section>
 
 <section class="contact" id="contact"><div class="wrap">
-  <div><h2>Any questions?</h2><p class="lead" style="margin-top:18px">If you have any questions or would like to make a reservation, please get in touch.</p>
+  <div><h2>Our contacts</h2><p class="lead" style="margin-top:18px">If you have any questions or would like to make a reservation, please contact us.</p>
     <div class="book"><a class="btn" href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener">Booking.com</a><a class="btn" href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener">Airbnb</a></div></div>
-  <div class="person"><h4>Lana Haynes Hodžić</h4><div class="role">Villa Vaho</div><p><span>Phone</span>+385 91 761 6797<br><span>Mobile</span>+44 7960 406 455<br><span>Email</span>info@villavaho.com</p></div>
-  <div class="person"><h4>Adria Tibor Tours</h4><div class="role">Reservations &amp; local tours</div><p><span>Phone</span>+385 51 785 085<br><span>Mobile</span>+385 95 573 5667<br><span>Email</span>info@tibor-tours.hr</p></div>
+  <div class="person"><h4>Lana Haynes Hodžić</h4><div class="role">Villa Vaho</div><p><span>Phone</span><a href="tel:+385917616797">+385 91 761 6797</a><br><span>Email</span><a href="mailto:info@villavaho.com">info@villavaho.com</a></p></div>
+  <div class="person"><h4>Adriagate</h4><div class="role">Travel agency</div><p><span>Phone</span><a href="tel:+38551785305">+385 51 785 305</a><br><span>Mobile</span><a href="tel:+385955735667">+385 95 573 5667</a><br><span>Email</span><a href="mailto:info@adriagate.com">info@adriagate.com</a></p></div>
 </div></section>
 
-<footer><div class="wrap"><span class="logo">Villa Vaho</span><span>Novi Vinodolski, Croatia · © 2027</span><span>EN · HR · DE</span></div></footer>
+<footer><div class="wrap">
+  <a class="logo" href="#top">Villa Vaho</a>
+  <span>Novi Vinodolski, Croatia · © 2026 Villa Vaho</span>
+  <div class="links"><a href="privacy.html">Privacy &amp; cookies</a><button id="ckOpen">Cookie settings</button></div>
+</div></footer>
 
-<div class="allg" id="allg"><div class="head"><span class="logo" style="font-size:17px">Villa Vaho photos</span><button class="btn" id="closeAll" style="height:44px">Close ✕</button></div><div id="allgIn"></div></div>
-<div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx">✕</button></div><div class="stage"><button class="nav prev" id="lbp">←</button><img id="lbi" alt=""><button class="nav next" id="lbn">→</button></div></div>
+<div class="ck" id="ck" role="dialog" aria-label="Cookie settings">
+  <h5>Cookies</h5>
+  <p>This website uses no tracking or advertising cookies. Only the Google Maps map can set cookies, and it loads only if you allow it. <a href="privacy.html">Privacy &amp; cookies</a></p>
+  <div class="btns"><button class="btn dark" id="ckYes">Allow Google Maps</button><button class="btn" id="ckNo">Essential only</button></div>
+</div>
+
+<div class="allg" id="allg"><div class="head"><span class="logo">Villa Vaho photos</span><button class="btn" id="closeAll" style="height:44px">Close ✕</button></div><div id="allgIn"></div></div>
+<div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper level",["23","24","28","26","31","18","12","16","33","38","37","2","6","8","50","51","11","39"]],["Lower level",["70","71","91","93","77","78","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","65","68"]],["Roof terrace & surroundings",["105","107","109","117","119","103","112","120","136","132","130","121","137","129","124","126","138"]]];
+const groups=[["Upper apartment",["24","23","28","26","31","18","12","16","33","38","37","2","6","8","50","51","11","39"]],["Lower apartment",["70","71","91","93","77","78","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","65","68"]],["Roof terrace",["105","107","109","117","119","103","112"]],["From above",["136","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beach","town"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
-const lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
-function show(i){cur=(i+all.length)%all.length;lbi.src='img/full/'+all[cur]+'.jpg';lbc.textContent=(cur+1)+' / '+all.length;lb.classList.add('on')}
-document.querySelectorAll('.t[data-i]').forEach(t=>t.onclick=()=>show(all.indexOf(t.dataset.i)));
-document.getElementById('lbx').onclick=()=>lb.classList.remove('on');
-document.getElementById('lbp').onclick=()=>show(cur-1);document.getElementById('lbn').onclick=()=>show(cur+1);
-document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
-const ag=document.getElementById('allg'),agi=document.getElementById('allgIn');
-agi.innerHTML=groups.map(g=>'<h4>'+g[0]+'</h4><div class="g">'+g[1].map(n=>'<img loading="lazy" src="img/th/'+n+'.jpg" data-n="'+n+'">').join('')+'</div>').join('')+'<div style="height:60px"></div>';
-agi.querySelectorAll('img').forEach(i=>i.onclick=()=>show(all.indexOf(i.dataset.n)));
-document.getElementById('openAll').onclick=()=>{ag.classList.add('on');document.body.style.overflow='hidden'};
-document.getElementById('closeAll').onclick=()=>{ag.classList.remove('on');document.body.style.overflow=''};
+const $=id=>document.getElementById(id);
+const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
+function show(i){if(i<0&&!lb.classList.contains('on'))i=0;cur=(i+all.length)%all.length;lbi.src='img/full/'+all[cur]+'.jpg';lbc.textContent=(cur+1)+' / '+all.length;lb.classList.add('on')}
+document.querySelectorAll('.t[data-i]').forEach(t=>{t.tabIndex=0;t.setAttribute('role','button');if(!t.getAttribute('aria-label'))t.setAttribute('aria-label','Open photo');
+  t.onclick=()=>show(all.indexOf(t.dataset.i));t.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t.onclick()}}});
+$('lbx').onclick=()=>lb.classList.remove('on');
+$('lbp').onclick=()=>show(cur-1);$('lbn').onclick=()=>show(cur+1);
+const ag=$('allg'),agi=$('allgIn');
+agi.innerHTML=groups.map(g=>'<h4>'+g[0]+'</h4><div class="g">'+g[1].map(n=>'<img loading="lazy" src="img/th/'+n+'.jpg" data-n="'+n+'" alt="" tabindex="0">').join('')+'</div>').join('')+'<div style="height:60px"></div>';
+agi.querySelectorAll('img').forEach(i=>{i.onclick=()=>show(all.indexOf(i.dataset.n));i.onkeydown=e=>{if(e.key==='Enter')i.onclick()}});
+const closeAll=()=>{ag.classList.remove('on');document.body.style.overflow=''};
+$('openAll').onclick=()=>{ag.classList.add('on');document.body.style.overflow='hidden'};
+$('closeAll').onclick=closeAll;
+document.addEventListener('keydown',e=>{
+  if(lb.classList.contains('on')){if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);return}
+  if(e.key==='Escape'){if(ag.classList.contains('on'))closeAll();closeMenu()}});
+/* mobile menu */
+const mnav=$('mnav'),mb=$('menuBtn');
+function closeMenu(){mnav.classList.remove('on');mb.setAttribute('aria-expanded','false');mnav.setAttribute('aria-hidden','true');if(!ag.classList.contains('on'))document.body.style.overflow=''}
+mb.onclick=()=>{mnav.classList.add('on');mb.setAttribute('aria-expanded','true');mnav.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+$('menuClose').onclick=closeMenu;mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+/* active nav link */
+const links=[...document.querySelectorAll('nav ul a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+addEventListener('scroll',()=>{let y=scrollY+150,on=links[0];secs.forEach((s,i)=>{if(s.offsetTop<=y)on=links[i]});links.forEach(a=>a.classList.toggle('on',a===on))},{passive:true});
+/* consent + map */
+const KEY='vv-consent',ck=$('ck');
+const get=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
+const set=v=>{try{localStorage.setItem(KEY,v)}catch(e){}};
+const MAP='https://maps.google.com/maps?q=Novi%20Vinodolski%2C%20Croatia&z=14&output=embed';
+function loadMap(){if($('map').querySelector('iframe'))return;const f=document.createElement('iframe');f.src=MAP;f.title='Map of Novi Vinodolski';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';$('map').appendChild(f);$('mapph').style.display='none'}
+function unloadMap(){const f=$('map').querySelector('iframe');if(f)f.remove();$('mapph').style.display=''}
+function apply(v){if(v==='maps')loadMap();else unloadMap()}
+const c=get();if(c)apply(c);else ck.classList.add('on');
+$('ckYes').onclick=()=>{set('maps');apply('maps');ck.classList.remove('on')};
+$('ckNo').onclick=()=>{set('essential');apply('essential');ck.classList.remove('on')};
+$('ckOpen').onclick=()=>ck.classList.add('on');
+$('loadMap').onclick=()=>{set('maps');apply('maps');ck.classList.remove('on')};
 </script>
 </body></html>
