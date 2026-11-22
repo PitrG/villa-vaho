@@ -202,14 +202,16 @@ footer button:hover{color:#fff}
 }
 
 /* cookie banner */
-.ck{position:fixed;left:24px;bottom:24px;z-index:60;max-width:430px;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.18);padding:24px 26px;display:none;font-size:15px;color:var(--ink2)}
+.ck{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;box-shadow:0 -10px 40px rgba(0,0,0,.1);display:none;font-size:15px;color:var(--ink2)}
 .ck.on{display:block}
-.ck h5{font:400 22px "Prata";color:var(--ink);margin-bottom:8px}
+.ck .in{max-width:var(--w);margin:0 auto;padding:22px 128px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.ck p{max-width:760px}
 .ck a{color:var(--ink);text-decoration:underline}
-.ck .btns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
-.ck .btn{height:44px;font-size:14px;padding:0 18px}
+.ck .btns{display:flex;gap:10px;flex:none}
+.ck .btn{height:46px;font-size:15px;padding:0 24px}
 .t:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-@media(max-width:860px){.ck{left:12px;right:12px;bottom:12px;max-width:none;padding:20px}}
+@media(max-width:1200px){.ck .in{padding:20px 56px}}
+@media(max-width:860px){.ck .in{flex-direction:column;align-items:stretch;gap:16px;padding:20px}.ck .btns .btn{flex:1;justify-content:center}}
 </style></head><body>
 
 <nav><div class="wrap">
@@ -384,8 +386,8 @@ footer button:hover{color:#fff}
   <div class="map" id="map">
     <div class="mapph" id="mapph">
       <svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></svg>
-      <p>The map is provided by Google Maps. When you load it, Google may set cookies and receive your IP address. <a href="privacy.html#maps" style="text-decoration:underline">Learn more</a></p>
-      <div class="btns"><button class="btn dark" id="loadMap">Load map</button></div>
+      <p>To see the map, please accept cookies.</p>
+      <div class="btns"><button class="btn dark" id="loadMap">Accept cookies</button></div>
     </div>
   </div>
 </div></section>
@@ -416,11 +418,10 @@ footer button:hover{color:#fff}
   <div class="links"><a href="privacy.html">Privacy &amp; cookies</a><button id="ckOpen">Cookie settings</button></div>
 </div></footer>
 
-<div class="ck" id="ck" role="dialog" aria-label="Cookie settings">
-  <h5>Cookies</h5>
-  <p>This website uses no tracking or advertising cookies. Only the Google Maps map can set cookies, and it loads only if you allow it. <a href="privacy.html">Privacy &amp; cookies</a></p>
-  <div class="btns"><button class="btn dark" id="ckYes">Allow Google Maps</button><button class="btn" id="ckNo">Essential only</button></div>
-</div>
+<div class="ck" id="ck" role="dialog" aria-label="Cookies"><div class="in">
+  <p>We use cookies to show you the map on this page. Some cookies are necessary for the website to work, others are used only with your consent. <a href="privacy.html">Learn more</a></p>
+  <div class="btns"><button class="btn" id="ckNo">Reject</button><button class="btn dark" id="ckYes">Accept</button></div>
+</div></div>
 
 <div class="allg" id="allg"><div class="head"><span class="logo">Villa Vaho photos</span><button class="btn" id="closeAll" style="height:44px">Close ✕</button></div><div id="allgIn"></div></div>
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>

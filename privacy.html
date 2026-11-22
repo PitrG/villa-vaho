@@ -34,7 +34,7 @@ button.ghost{background:none;color:var(--ink)}
 <h1>Privacy &amp; cookies</h1>
 <p class="upd">Last updated: November 2026</p>
 
-<div class="box"><p>In short: this website does not collect any personal data, has no contact forms, and uses no analytics, tracking or advertising cookies. The only third-party service is the Google Maps map, which loads only if you allow it.</p></div>
+<div class="box"><p>In short: this website does not collect any personal data, has no contact forms, and uses no analytics, tracking or advertising cookies. The only cookies come from Google Maps, and they are used only if you accept cookies.</p></div>
 
 <h2>Who runs this website</h2>
 <p>Lana Haynes Hodžić, Villa Vaho, Novi Vinodolski, Croatia<br>Email: <a href="mailto:info@villavaho.com">info@villavaho.com</a> · Phone: <a href="tel:+385917616797">+385 91 761 6797</a></p>
@@ -47,17 +47,17 @@ button.ghost{background:none;color:var(--ink)}
 <p>If you write to us by email or call us, we use your details only to answer your enquiry and, if you book, to arrange your stay. We keep them only as long as needed for that purpose or as required by law.</p>
 
 <h2 id="maps">Google Maps</h2>
-<p>The map in the location section is provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. It loads only after you click “Load map” or “Allow Google Maps”. Google may then receive your IP address and set cookies on your device, and data may be transferred to Google LLC in the USA. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+<p>The map in the location section is provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. It loads only after you click “Accept” in the cookie banner or “Accept cookies” on the map. Google may then receive your IP address and set cookies on your device, and data may be transferred to Google LLC in the USA. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
 <p>The legal basis is your consent (Article 6(1)(a) GDPR). You can withdraw it at any time below.</p>
 
 <h2>Cookies and local storage</h2>
 <table>
 <tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
-<tr><td>vv-consent</td><td>This website (local storage)</td><td>Remembers your choice about Google Maps. Strictly necessary, set only when you make a choice.</td><td>Until you clear your browser data</td></tr>
-<tr><td>Google cookies (e.g. NID)</td><td>Google</td><td>Set by Google Maps, only if you allow the map.</td><td>See Google's policy</td></tr>
+<tr><td>vv-consent</td><td>This website (local storage)</td><td>Remembers whether you accepted or rejected cookies. Strictly necessary.</td><td>Until you clear your browser data</td></tr>
+<tr><td>Google cookies (e.g. NID)</td><td>Google</td><td>Set by Google Maps, only if you accept cookies.</td><td>See Google's policy</td></tr>
 </table>
 <p>Your current choice: <span id="state">not set</span></p>
-<button id="allow">Allow Google Maps</button><button class="ghost" id="deny">Essential only</button>
+<button id="allow">Accept cookies</button><button class="ghost" id="deny">Reject cookies</button>
 
 <h2>Links to other websites</h2>
 <p>This website links to Booking.com, Airbnb and Adriagate, where you can book your stay. When you visit those websites, their own privacy policies apply.</p>
@@ -70,7 +70,7 @@ button.ghost{background:none;color:var(--ink)}
 const K='vv-consent',st=document.getElementById('state');
 const get=()=>{try{return localStorage.getItem(K)}catch(e){return null}};
 const set=v=>{try{localStorage.setItem(K,v)}catch(e){}};
-const show=()=>{const v=get();st.textContent=v==='maps'?'Google Maps allowed':v==='essential'?'Essential only':'not set'};
+const show=()=>{const v=get();st.textContent=v==='maps'?'Accepted':v==='essential'?'Rejected':'not set'};
 document.getElementById('allow').onclick=()=>{set('maps');show()};
 document.getElementById('deny').onclick=()=>{set('essential');show()};
 show();
