@@ -72,6 +72,10 @@ nav .btn{height:50px;font-size:16px}
 .ticks{list-style:none;margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
 .ticks li{padding:8px 16px;background:var(--soft);border-radius:99px;font-size:15px}
 
+.beds{margin-top:120px}
+.beds h3{font-size:44px}
+.bedgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.bedgrid .t{aspect-ratio:3/4;border-radius:4px}
 /* band */
 .band{position:relative;height:640px;color:#fff;overflow:hidden;padding:0}
 .band img{position:absolute;inset:0}
@@ -92,6 +96,7 @@ nav .btn{height:50px;font-size:16px}
 .t{cursor:zoom-in;overflow:hidden;border-radius:4px}
 .t img{transition:transform .6s}.t:hover img{transform:scale(1.03)}
 .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:20px}
+.row3 .t{aspect-ratio:4/3}
 .gbtn{text-align:center;margin-top:48px}
 /* facilities */
 .fac{display:grid;grid-template-columns:repeat(5,1fr);row-gap:60px;margin-top:80px;text-align:center}
@@ -183,6 +188,7 @@ footer button:hover{color:#fff}
  .stats{grid-template-columns:1fr 1fr;row-gap:20px}.stats b{font-size:30px}
  .house{padding-top:0}.row,.row.rev{grid-template-columns:1fr;gap:30px;margin-top:70px}.row.rev .pics{order:0}
  .pics{height:380px;gap:10px}.pics .side{gap:10px}.row h3{font-size:34px}.row p{font-size:16px}
+ .beds{margin-top:70px}.beds h3{font-size:34px}.bedgrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
  .band{height:460px}.band blockquote{font-size:28px}.band .q{bottom:44px}
  .glance .grid{grid-template-columns:1fr;gap:16px;margin-top:40px}.gl.photo{height:280px}
  .mosaic{grid-template-columns:1fr;gap:10px;margin-top:40px}.mosaic .col,.mosaic .two{gap:10px}.row3{gap:10px;margin-top:10px;grid-template-columns:1fr 1fr}.row3 .t:last-child{display:none}
@@ -220,18 +226,18 @@ footer button:hover{color:#fff}
   <div>
     <div class="where">Novi Vinodolski · Croatia</div>
     <h1>A villa overlooking the <em>Adriatic</em></h1>
-    <p class="lead">On the northern edge of Novi Vinodolski, built into the slope that heads down to the sea, with a commanding view of the Adriatic and the island of Krk. The beach is a five-minute walk away.</p>
+    <p class="lead">Villa Vaho is on the northern edge of the small town of Novi Vinodolski. It is a 5-minute walk from the beach and has a commanding view of the Adriatic and the island of Krk.</p>
     <a class="btn dark" href="#house">Explore the house</a>
   </div>
   <div class="ph"><img src="img/full/136.jpg" alt="The Kvarner bay and the island of Krk seen from above Villa Vaho"></div>
 </div></header>
 
 <section class="welcome" id="welcome"><div class="wrap">
-  <div><h2>A modern Mediterranean house, made for <em>families</em></h2></div>
+  <div><h2>A modern Mediterranean house</h2></div>
   <div>
-    <p>Villa Vaho was designed and built by an architect, the owner's father, in the late 60s and completed in the early 70s. It sits a 30-minute walk along the coast from the centre of Novi Vinodolski, in an area pioneered by the holiday homes and villas of professional families, mostly from Zagreb.</p>
-    <p>The house is built into the slope on two levels, which divides it into two distinct apartments. The front and back gardens are full of mature trees, including figs, pomegranates and a large almond tree, with shrubs and aromatic plants all around. The garden is walled, safe and secure for young children and pets.</p>
-    <p>The villa is ideal for families with children, or indeed two families.</p>
+    <p>Villa Vaho was designed and built by my architect father in the late 60s and completed in the early 70s in a modern Mediterranean style. It is situated a 30-minute walk along the coast from the centre of Novi Vinodolski, in an area that was pioneered by the holiday homes and villas of professional families, mostly from Zagreb.</p>
+    <p>The house has a front and a back garden. It is built into the slope on two levels, which divides it into two distinct apartments. The garden contains mature trees including figs, pomegranates and a large almond tree, with various shrubs and aromatic plants.</p>
+    <p>Villa Vaho is surrounded by a large walled garden that is safe and secure for young children and pets. The villa is ideal for families with children, or indeed two families.</p>
     <div class="stats">
       <div><b>10</b><span>guests</span></div>
       <div><b>4</b><span>bedrooms</span></div>
@@ -247,54 +253,63 @@ footer button:hover{color:#fff}
   <div class="row">
     <div class="pics">
       <div class="t" data-i="24"><img src="img/full/24.jpg" alt="Balcony terrace of the upper apartment with a view of the sea and Krk"></div>
-      <div class="side"><div class="t" data-i="12"><img src="img/th/12.jpg" alt="Dining room in the upper apartment"></div><div class="t" data-i="37"><img src="img/th/37.jpg" alt="Double bedroom with patterned wallpaper"></div></div>
+      <div class="side"><div class="t" data-i="12"><img src="img/th/12.jpg" alt="Indoor dining area in the upper apartment"></div><div class="t" data-i="19"><img src="img/th/19.jpg" alt="Living area with fireplace in the upper apartment"></div></div>
     </div>
     <div>
       <h3>The upper apartment</h3>
-      <p>Three double bedrooms, all with air conditioning, and a large living area that opens onto a balcony terrace. Every room overlooks the sea.</p>
-      <p>There is a fully equipped kitchen with a dishwasher and washing machine, an indoor dining area, a bathroom, a separate toilet and a storage room. The kitchen door leads to the front garden, an outdoor eating area and a built-in barbecue.</p>
-      <ul class="ticks"><li>Sleeps 6</li><li>3 double bedrooms with AC</li><li>Sea view from every room</li><li>Balcony terrace</li></ul>
+      <p>The upper apartment has three double bedrooms, all with AC units, and a large living area with a balcony terrace. All rooms overlook the sea. There is a fully equipped kitchen with a dishwasher and a washing machine, an indoor dining area, a bathroom, a separate toilet and a storage room. It sleeps 6 people.</p>
+      <p>The kitchen door leads to the front garden, an outdoor eating area and a built-in barbecue. There is Wi-Fi throughout the house.</p>
+      <ul class="ticks"><li>Sleeps 6</li><li>3 double bedrooms with AC</li><li>All rooms overlook the sea</li><li>Balcony terrace</li></ul>
     </div>
   </div>
   <div class="row rev">
     <div class="pics">
-      <div class="t" data-i="70"><img src="img/full/70.jpg" alt="Table under the vine-covered pergola"></div>
-      <div class="side"><div class="t" data-i="91"><img src="img/th/91.jpg" alt="Open-plan living room of the lower apartment"></div><div class="t" data-i="77"><img src="img/th/77.jpg" alt="Double bedroom in the lower apartment"></div></div>
+      <div class="t" data-i="70"><img src="img/full/70.jpg" alt="Table under the grapevine pergola"></div>
+      <div class="side"><div class="t" data-i="91"><img src="img/th/91.jpg" alt="Open-plan living room of the lower apartment"></div><div class="t" data-i="83"><img src="img/th/83.jpg" alt="Kitchen of the lower apartment"></div></div>
     </div>
     <div>
       <h3>The lower apartment</h3>
-      <p>A self-contained apartment with a large open-plan living room, kitchen and dining area that can also be used for extra sleeping, plus a double bedroom and a bathroom. It has its own air conditioning.</p>
-      <p>The apartment opens onto a lawn and a paved table area under a wooden pergola covered with grapevine. Again, there is a fantastic view of the Adriatic.</p>
-      <ul class="ticks"><li>Sleeps up to 4</li><li>Own entrance and kitchen</li><li>Air conditioning</li><li>Vine pergola and lawn</li></ul>
+      <p>The lower apartment has a large open-plan living room, kitchen and dining area, which can be used for additional sleeping, one bedroom and a bathroom. It has an AC unit and sleeps up to 4 people.</p>
+      <p>The apartment leads out onto a lawn with a paved table area under a wooden pergola covered with a grapevine. Again, there is a fantastic view of the Adriatic.</p>
+      <ul class="ticks"><li>Sleeps up to 4</li><li>1 double bedroom</li><li>Air conditioning</li><li>Lawn and grapevine pergola</li></ul>
     </div>
   </div>
   <div class="row">
     <div class="pics">
-      <div class="t" data-i="105"><img src="img/full/105.jpg" alt="Lounge area and covered pergola on the roof terrace"></div>
-      <div class="side"><div class="t" data-i="63"><img src="img/th/63.jpg" alt="Loungers and table in the garden"></div><div class="t" data-i="65"><img src="img/th/65.jpg" alt="Built-in barbecue in the garden"></div></div>
+      <div class="t" data-i="105"><img src="img/full/105.jpg" alt="Covered pergola and lounge area on the roof terrace"></div>
+      <div class="side"><div class="t" data-i="59"><img src="img/th/59.jpg" alt="Hammock in the walled garden"></div><div class="t" data-i="65"><img src="img/th/65.jpg" alt="Built-in barbecue in the garden"></div></div>
     </div>
     <div>
       <h3>Roof terrace and garden</h3>
       <p>Above the upper level there is a huge terrace with a covered pergola and dining area, ideal for sunbathing, relaxing and enjoying the views.</p>
-      <p>Down in the walled garden you'll find hammocks, loungers and parasols, a built-in barbecue and plenty of shade under the fig and almond trees.</p>
+      <p>The garden is equipped with hammocks, loungers and parasols. There are 3 parking spaces in front of the property.</p>
       <ul class="ticks"><li>Covered rooftop dining</li><li>Built-in barbecue</li><li>Hammocks, loungers and parasols</li><li>Parking for 3 cars</li></ul>
+    </div>
+  </div>
+  <div class="beds">
+    <div class="center"><h3>The bedrooms</h3><p class="lead">Three double bedrooms in the upper apartment and one in the lower, all with air conditioning.</p></div>
+    <div class="bedgrid">
+      <div class="t" data-i="37"><img src="img/th/37.jpg" alt="Double bedroom with patterned wallpaper"></div>
+      <div class="t" data-i="43"><img src="img/th/43.jpg" alt="Bedroom with two beds"></div>
+      <div class="t" data-i="45"><img src="img/th/45.jpg" alt="Bedroom with a window onto the garden"></div>
+      <div class="t" data-i="77"><img src="img/th/77.jpg" alt="Double bedroom in the lower apartment"></div>
     </div>
   </div>
 </div></section>
 
-<section class="band"><img src="img/full/120.jpg" alt="The Kvarner bay and the island of Krk from above the villa">
-  <div class="q"><blockquote>Crystal-clear sea in front, mountains behind, and Krk on the horizon.</blockquote></div>
+<section class="band"><img src="img/full/140.jpg" alt="The coast of Novi Vinodolski and the Kvarner bay from above">
+  <div class="q"><blockquote>A commanding view of the Adriatic and the island of Krk.</blockquote></div>
 </section>
 
 <section class="glance"><div class="wrap">
   <div class="center"><h2>Good to know</h2></div>
   <div class="grid">
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M3 18c3-2 6-2 9 0s6 2 9 0M3 13c3-2 6-2 9 0s6 2 9 0"/></svg><h4>Local beach</h4><p>The nearest beach is 50 metres down the hill, about five minutes away. Along the 6 km coastline there are rocky, pebble and man-made beaches, and one sandy beach in town.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h4>Centrally located</h4><p>2 km before the west entrance to town, or a 30-minute walk along the seashore. Easily reached from the main E65 road, about 500 m from the turn-off.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 16h20M4 16v4M20 16v4M4 16V8h16v8M8 12h8"/></svg><h4>Accommodation</h4><p>Sleeps 8 to 10. The upper apartment takes 6 guests, the lower one 2 adults and 2 children. Dishwasher, washing machine, microwave, free Wi-Fi and several AC units.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M3 18c3-2 6-2 9 0s6 2 9 0M3 13c3-2 6-2 9 0s6 2 9 0"/></svg><h4>Local beach</h4><p>The nearest beach is 50 metres down the hill, or 5 minutes away. There are various beaches along the 6 km coastline. Mostly they are rocky, pebbled or man-made. One beach in town is sandy.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h4>Centrally located</h4><p>The house is situated 2 km before the west entrance to the town, or a 30-minute walk along the seashore. It is easily accessible from the main road E65, approximately 500 m from the turn-off.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 16h20M4 16v4M20 16v4M4 16V8h16v8M8 12h8"/></svg><h4>Accommodation</h4><p>The house sleeps 8 to 10 people. The upper part accommodates 6 people and the lower part 2 adults and 2 children. In the upper part there is a dishwasher, a washing machine and a microwave. Free Wi-Fi and several AC units throughout the house.</p></div>
     <div class="gl photo t" data-i="68"><img src="img/th/68.jpg" alt="A cat resting in the garden"></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 20 9 8l4 6 3-4 6 10z"/></svg><h4>Experience it</h4><p>Crystal-clear sea, mountain and forest walks, boat tours to nearby islands, organised visits to cultural sites, and plenty of restaurants and bars.</p></div>
-    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 13l20-6-6 13-3-6z"/></svg><h4>Nearest airport</h4><p>Rijeka Airport on the island of Krk is 30 km from the house. Pula airport is 150 km away and Zagreb airport 200 km.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 20 9 8l4 6 3-4 6 10z"/></svg><h4>Experience it</h4><p>The area offers crystal clear sea, mountain and forest walks, boat tours to nearby islands, organised visits to cultural sites, copious restaurants to taste local delicacies and numerous bars to relax with your favourite drink or cocktail.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 13l20-6-6 13-3-6z"/></svg><h4>Nearest airport</h4><p>The nearest airport is Rijeka Airport on the island of Krk, 30 km from the house. Pula airport is 150 km away and Zagreb airport 200 km away.</p></div>
   </div>
 </div></section>
 
@@ -302,16 +317,16 @@ footer button:hover{color:#fff}
   <div class="center"><h2>Have a look around</h2>
   <p class="lead">Terrazzo floors, patterned wallpaper, shelves full of books and shells, and the sea in almost every window.</p></div>
   <div class="mosaic">
-    <div class="t" data-i="117"><img src="img/full/117.jpg" alt="Roof terrace with a parasol and a view of Krk"></div>
+    <div class="t" data-i="74"><img src="img/full/74.jpg" alt="The lower apartment opening onto the garden under the pergola"></div>
     <div class="col">
       <div class="t" data-i="57"><img src="img/th/57.jpg" alt="Breakfast table in the garden"></div>
-      <div class="two"><div class="t" data-i="33"><img src="img/th/33.jpg" alt="Sitting room with books and a painting"></div><div class="t" data-i="31"><img src="img/th/31.jpg" alt="Living room of the upper apartment"></div></div>
+      <div class="two"><div class="t" data-i="33"><img src="img/th/33.jpg" alt="Sitting room with books and a painting"></div><div class="t" data-i="3"><img src="img/th/3.jpg" alt="Kitchen in the upper apartment"></div></div>
     </div>
   </div>
   <div class="row3">
-    <div class="t" data-i="97"><img src="img/th/97.jpg" alt="Lawn and pergola of the lower apartment"></div>
-    <div class="t" data-i="38"><img src="img/th/38.jpg" alt="Bedroom with a view of the garden"></div>
-    <div class="t" data-i="109"><img src="img/th/109.jpg" alt="Lounge sofas on the roof terrace"></div>
+    <div class="t" data-i="115"><img src="img/th/115.jpg" alt="Loungers and a yellow parasol on the roof terrace"></div>
+    <div class="t" data-i="35"><img src="img/th/35.jpg" alt="Rocking chair by the window"></div>
+    <div class="t" data-i="49"><img src="img/th/49.jpg" alt="Deck chairs on the lawn"></div>
   </div>
   <div class="gbtn"><button class="btn" id="openAll">View more photos</button></div>
 </div></section>
@@ -334,17 +349,17 @@ footer button:hover{color:#fff}
 
 <section class="story" id="novi"><div class="wrap">
   <div class="top">
-    <div><h2>A little town with a <em>long story</em></h2></div>
-    <p>Novi Vinodolski lies 50 km south of Rijeka. The town grew up on the hill above a small harbour, at the sea end of a long valley that once fed the local people and was known for its vines. Wine is still made here, and local wine is sold and served in shops and restaurants. Today the area is all about family holidays, with two marinas welcoming visitors by boat.</p>
+    <div><h2>Novi Vinodolski</h2></div>
+    <p>The town of Novi Vinodolski is situated 50 km south of the city of Rijeka, in the northern part of the Croatian Adriatic. It developed on the hill above a small harbour, at the sea entrance of the long valley (Vialis vinearia) that once fed the local population and was known for its vines. Hence the name Vino-dol, a vine valley. Today wine production still exists, and there are shops and restaurants that sell and serve local wine.</p>
   </div>
   <div class="facts">
-    <div class="fact"><div class="yr">Vino·dol</div><h4>The vine valley</h4><p>The town takes its name from the valley behind it, Vialis vinearia: “vino” for wine and “dol” for valley.</p></div>
-    <div class="fact"><div class="yr">1288</div><h4>The Vinodol Code</h4><p>Created here by the noble Frankopan family and written in old Glagolitic script, it is one of the oldest legal documents in Croatian history.</p></div>
-    <div class="fact"><div class="yr">1800s</div><h4>Habsburg holidays</h4><p>The Habsburgs took over the region in the 16th century. In the 19th, nobles drawn by the clear sea and nearby mountains began building holiday homes here.</p></div>
-    <div class="fact"><div class="yr">1960s</div><h4>A new holiday coast</h4><p>The tradition continued in the 60s and 70s, when professional families could buy land and build holiday homes. Villa Vaho dates from this time.</p></div>
+    <div class="fact"><div class="yr">13th c.</div><h4>The Vinodol Statute</h4><p>Created by the house of Frankopan, a noble Croatian ruling family, and written in old Glagolitic script. It was the first Croatian legal document proving regional independence.</p></div>
+    <div class="fact"><div class="yr">16th c.</div><h4>The Habsburgs</h4><p>The Habsburgs took over the region, and in the 19th century they started to develop tourism here. The clear sea and nearby mountains drew nobles to build their holiday homes.</p></div>
+    <div class="fact"><div class="yr">60s & 70s</div><h4>Holiday homes</h4><p>The tradition continued when Yugoslavia encouraged tourism and it became possible for professionals to acquire land and build their holiday homes.</p></div>
+    <div class="fact"><div class="yr">Today</div><h4>Family holidays</h4><p>The town and the area are oriented to family tourism, with numerous private and hotel accommodation and two marinas welcoming nautical visitors.</p></div>
   </div>
   <div class="strip">
-    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Pebble beach and clear water near Novi Vinodolski"></div>
+    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Rocky beach and clear water near Novi Vinodolski"></div>
     <div class="t" data-i="126"><img src="img/full/126.jpg" alt="The coastline of Novi Vinodolski from above"></div>
     <div class="t" data-i="town"><img src="img/th/town.jpg" alt="Novi Vinodolski harbour and old town"></div>
   </div>
@@ -353,10 +368,10 @@ footer button:hover{color:#fff}
     <div>
       <h3>Things to do nearby</h3>
       <dl>
-        <dt>On the water</dt><dd>Swimming, snorkelling, diving, sailing and jet skiing, and boat tours along the coast and to the nearby islands.</dd>
-        <dt>History on the doorstep</dt><dd>Frankopan castles and churches all around, the ruins of the Pauline monastery 1.8 km away, the town museum and a summer programme of concerts, festivals, town tours and exhibitions.</dd>
-        <dt>Further afield</dt><dd>The island of Krk, 20 km away, known for its heritage, wine and natural beauty. National parks and lakes, Mount Učka, Istria, and even Venice, only three hours by car.</dd>
-        <dt>At the table</dt><dd>Grilled fish and meat, Mediterranean and Italian cooking, and hunters' lodges in the hills serving game.</dd>
+        <dt>On the water</dt><dd>Crystal clear sea offers swimming, snorkelling, diving, sailing and jet skiing. Boat tours are a popular way to explore the coastline and the nearby islands. The island of Krk is 20 km away, prolific in its heritage, wine production and natural beauty.</dd>
+        <dt>History and culture</dt><dd>The Frankopans built the citadel with its stronghold, and today their grandiose buildings, churches and castles can be visited in the whole area. The town museum and the summer festivals show Novi's long history, culture and customs, and every year the tourist board puts on classical concerts, festivals, town tours and exhibitions.</dd>
+        <dt>For active visitors</dt><dd>The surrounding mountains provide cooler hiking and cycling terrain. Explore several national parks and lakes, Mount Učka and the peninsula of Istria, and even Venice, only 3 hours' drive away.</dd>
+        <dt>At the table</dt><dd>Local cuisine is rich and varied. Restaurants are numerous, offering predominantly traditional continental and Mediterranean food such as grilled meat or fish. Italian cuisine is easy to find, and a few hunters' lodges offer wild meat and game.</dd>
       </dl>
     </div>
   </div>
@@ -365,7 +380,7 @@ footer button:hover{color:#fff}
 <section class="loc" id="location"><div class="in">
   <div class="txt">
     <h2>Getting here</h2>
-    <p class="lead">The house is 2 km before the western entrance to Novi Vinodolski, about 500 m from the turn-off on the main E65 coastal road. A small, well-stocked shop is a 10-minute walk away, and the town has four supermarkets, a pharmacy, banks, a bus station and a small food market.</p>
+    <p class="lead">There is a small, well-stocked local shop a 10-minute walk away. The town has 4 supermarkets, a large drugstore, 2 petrol stations, a pharmacy, 2 banks, several ATMs, a bus station, exchange offices, a small food market and various smaller shops, many selling beach equipment.</p>
     <div class="dist">
       <div><b>50 m</b><span>Nearest beach</span></div><div><b>30 min</b><span>Walk to the town centre</span></div>
       <div><b>30 km</b><span>Rijeka Airport</span></div><div><b>50 km</b><span>Rijeka city</span></div>
@@ -379,17 +394,17 @@ footer button:hover{color:#fff}
   <h2>Frequently asked</h2>
   <div>
     <details open><summary>How long can we stay?</summary><p>In season you can stay as long as you like, but there is no price reduction. In spring and autumn, prices are negotiable for stays longer than two weeks.</p></details>
-    <details><summary>What is the minimum stay?</summary><p>The minimum rental is 6 days.</p></details>
-    <details><summary>How many does the house sleep?</summary><p>Up to 10 people. Eight sleep in separate rooms, while two, usually children, sleep on the sofa beds in the open living room.</p></details>
-    <details><summary>How much is it to rent the whole house?</summary><p>Prices vary with the season, from 250 to 350 euros for the whole house. Please contact us with your dates for the exact price.</p></details>
-    <details><summary>Is there car parking?</summary><p>Yes, free parking for 3 cars on the street in front of the house.</p></details>
-    <details><summary>Can we bring our pets?</summary><p>Dogs are allowed, with an additional charge of 5 euros per dog. The garden is walled and safe for pets.</p></details>
+    <details><summary>What is the minimum stay?</summary><p>6 days is the minimum rental.</p></details>
+    <details><summary>How many does the house sleep?</summary><p>The house can accommodate up to 10 people. 8 people sleep in separate rooms, while 2, usually children, sleep on the sofa beds in the open living room.</p></details>
+    <details><summary>How much is it to rent the whole house?</summary><p>Prices vary according to the season, from 250 to 350 euros for the whole house. Please contact us with the dates requested to get the exact price.</p></details>
+    <details><summary>Is there car parking?</summary><p>There is free car parking for 3 cars on the street in front of the house.</p></details>
+    <details><summary>Can we bring our pets?</summary><p>Dogs are allowed, but there is an additional charge of 5 euros for each dog.</p></details>
     <details><summary>How do we book?</summary><p>You can book on <a href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener" style="text-decoration:underline">Booking.com</a> or <a href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener" style="text-decoration:underline">Airbnb</a>, or contact us directly by phone or email.</p></details>
   </div>
 </div></section>
 
 <section class="contact" id="contact"><div class="wrap">
-  <div><h2>Our contacts</h2><p class="lead" style="margin-top:18px">If you have any questions or would like to make a reservation, please contact us.</p>
+  <div><h2>Our contact</h2><p class="lead" style="margin-top:18px">If you have any questions or would like to make a reservation, please contact us.</p>
     <div class="book"><a class="btn" href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener">Booking.com</a><a class="btn" href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener">Airbnb</a></div></div>
   <div class="person"><h4>Lana Haynes Hodžić</h4><div class="role">Villa Vaho</div><p><span>Phone</span><a href="tel:+385917616797">+385 91 761 6797</a><br><span>Email</span><a href="mailto:info@villavaho.com">info@villavaho.com</a></p></div>
   <div class="person"><h4>Adriagate</h4><div class="role">Travel agency</div><p><span>Phone</span><a href="tel:+38551785305">+385 51 785 305</a><br><span>Mobile</span><a href="tel:+385955735667">+385 95 573 5667</a><br><span>Email</span><a href="mailto:info@adriagate.com">info@adriagate.com</a></p></div>
@@ -406,7 +421,7 @@ footer button:hover{color:#fff}
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper apartment",["24","23","28","26","31","18","12","16","33","38","37","2","6","8","50","51","11","39"]],["Lower apartment",["70","71","91","93","77","78","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","65","68"]],["Roof terrace",["105","107","109","117","119","103","112"]],["From above",["136","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beach","town"]]];
+const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","38","37","43","45","2","6","8","50","51","11","39"]],["Lower apartment",["70","71","74","91","93","83","77","78","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beach","town"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
 const $=id=>document.getElementById(id);
 const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
