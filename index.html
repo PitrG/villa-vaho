@@ -65,6 +65,8 @@ nav .btn{height:50px;font-size:16px}
 .row.rev{grid-template-columns:1fr 1.25fr}.row.rev .pics{order:2}
 .pics{display:grid;grid-template-columns:2fr 1fr;gap:16px;height:600px}
 .pics .side{display:grid;gap:16px}
+.pics.two{grid-template-columns:1fr;grid-template-rows:1fr 1fr;height:auto}
+.pics.two>div{aspect-ratio:3/2}
 .pics>div,.pics .side>div{overflow:hidden;border-radius:4px}
 .row .no{font:600 15px "Manrope";color:var(--acc);margin-bottom:14px;letter-spacing:.1em}
 .row h3{font-size:44px;margin-bottom:22px}
@@ -74,8 +76,8 @@ nav .btn{height:50px;font-size:16px}
 
 .beds{margin-top:120px}
 .beds h3{font-size:44px}
-.bedgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-.bedgrid .t{aspect-ratio:4/3;border-radius:4px}
+.bedgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.bedgrid .t{aspect-ratio:3/4;border-radius:4px}
 /* band */
 .band{position:relative;height:640px;color:#fff;overflow:hidden;padding:0}
 .band img{position:absolute;inset:0}
@@ -173,8 +175,8 @@ footer button:hover{color:#fff}
 .allg .head .logo{font-size:22px!important}
 .allg .head{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;z-index:2}
 .allg h4{font:400 30px "Prata";margin:44px 40px 20px}
-.allg .g{columns:3;column-gap:14px;padding:0 40px}
-.allg .g img{height:auto;margin-bottom:14px;cursor:zoom-in;border-radius:3px}
+.allg .g{display:flex;flex-wrap:wrap;gap:8px;padding:0 40px}
+.allg .g img{display:block;flex:none;object-fit:cover;cursor:zoom-in;border-radius:3px}
 /* responsive */
 @media(max-width:1200px){.wrap{padding:0 56px}.hero .wrap{padding-left:56px}.loc .txt{padding-left:56px}.hero h1{font-size:64px}h2{font-size:46px}nav ul{gap:20px}.row,.todo{gap:56px}.facts{grid-template-columns:1fr 1fr}}
 @media(max-width:860px){
@@ -187,7 +189,7 @@ footer button:hover{color:#fff}
  .welcome .wrap{grid-template-columns:1fr;gap:30px}.welcome h2{position:static}.welcome p{font-size:17px}
  .stats{grid-template-columns:1fr 1fr;row-gap:20px}.stats b{font-size:30px}
  .house{padding-top:0}.row,.row.rev{grid-template-columns:1fr;gap:30px;margin-top:70px}.row.rev .pics{order:0}
- .pics{height:380px;gap:10px}.pics .side{gap:10px}.row h3{font-size:34px}.row p{font-size:16px}
+ .pics{height:380px;gap:10px}.pics.two{height:auto}.pics .side{gap:10px}.row h3{font-size:34px}.row p{font-size:16px}
  .beds{margin-top:70px}.beds h3{font-size:34px}.bedgrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
  .band{height:460px}.band blockquote{font-size:28px}.band .q{bottom:44px}
  .glance .grid{grid-template-columns:1fr;gap:16px;margin-top:40px}.gl.photo{height:280px}
@@ -202,7 +204,7 @@ footer button:hover{color:#fff}
  summary{padding:20px 22px;font-size:16.5px}details{border-radius:16px;margin-bottom:12px}details p{padding:14px 20px 6px 50px;font-size:16px}details p:before{left:22px;top:12px}
  .contact .wrap{grid-template-columns:1fr;gap:40px}
  .lb .stage{padding:0 10px 20px}.lb .nav{display:none}
- .allg .g{columns:2;padding:0 14px}.allg h4{margin:30px 14px 14px;font-size:24px}.allg .head .logo{font-size:22px!important}
+ .allg .g{padding:0 14px;gap:6px}.allg h4{margin:30px 14px 14px;font-size:24px}.allg .head .logo{font-size:22px!important}
 .allg .head{padding:14px}
 }
 
@@ -251,9 +253,9 @@ footer button:hover{color:#fff}
 
 <section class="house" id="house"><div class="wrap">
   <div class="row">
-    <div class="pics">
-      <div class="t" data-i="24"><img src="img/full/24.jpg" alt="Balcony terrace of the upper apartment with a view of the sea and Krk"></div>
-      <div class="side"><div class="t" data-i="12"><img src="img/th/12.jpg" alt="Indoor dining area in the upper apartment"></div><div class="t" data-i="19"><img src="img/th/19.jpg" alt="Living area with fireplace in the upper apartment"></div></div>
+    <div class="pics two">
+      <div class="t" data-i="19"><img src="img/full/19.jpg" alt="Living area with fireplace in the upper apartment"></div>
+      <div class="t" data-i="12"><img src="img/full/12.jpg" alt="Indoor dining area in the upper apartment"></div>
     </div>
     <div>
       <h3>The upper apartment</h3>
@@ -289,12 +291,10 @@ footer button:hover{color:#fff}
   <div class="beds">
     <div class="center"><h3>The bedrooms</h3><p class="lead">Three double bedrooms in the upper apartment and one in the lower, all with air conditioning.</p></div>
     <div class="bedgrid">
-      <div class="t" data-i="oldmain"><img src="img/th/oldmain.jpg" alt="Double bedroom with a pink bedspread"></div>
-      <div class="t" data-i="olddouble"><img src="img/th/olddouble.jpg" alt="Double bedroom with wooden floors"></div>
-      <div class="t" data-i="oldtwin"><img src="img/th/oldtwin.jpg" alt="Twin bedroom with a sea view"></div>
+      <div class="t" data-i="37"><img src="img/th/37.jpg" alt="Double bedroom with patterned wallpaper"></div>
       <div class="t" data-i="twin"><img src="img/th/twin.jpg" alt="Twin bedroom with green cushions"></div>
-      <div class="t" data-i="37"><img src="img/th/37.jpg" alt="Bedroom with patterned wallpaper"></div>
-      <div class="t" data-i="oldgarden"><img src="img/th/oldgarden.jpg" alt="Bedroom with a window onto the garden"></div>
+      <div class="t" data-i="oldtwin"><img src="img/th/oldtwin.jpg" alt="Twin bedroom with yellow bedding and a sea view"></div>
+      <div class="t" data-i="77"><img src="img/th/77.jpg" alt="Double bedroom in the lower apartment"></div>
     </div>
   </div>
 </div></section>
@@ -361,7 +361,7 @@ footer button:hover{color:#fff}
     <div class="fact"><div class="yr">Today</div><h4>Family holidays</h4><p>The town and the area are oriented to family tourism, with numerous private and hotel accommodation and two marinas welcoming nautical visitors.</p></div>
   </div>
   <div class="strip">
-    <div class="t" data-i="beachaerial"><img src="img/th/beachaerial.jpg" alt="Beaches of Novi Vinodolski from above"></div>
+    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Rocky beach and clear water near Novi Vinodolski"></div>
     <div class="t" data-i="126"><img src="img/full/126.jpg" alt="The coastline of Novi Vinodolski from above"></div>
     <div class="t" data-i="town"><img src="img/th/town.jpg" alt="Novi Vinodolski harbour and old town"></div>
   </div>
@@ -387,9 +387,9 @@ footer button:hover{color:#fff}
       <div><b>50 m</b><span>Nearest beach</span></div><div><b>30 min</b><span>Walk to the town centre</span></div>
       <div><b>30 km</b><span>Rijeka Airport</span></div><div><b>50 km</b><span>Rijeka city</span></div>
     </div>
-    <div><a class="btn dark" href="https://www.google.com/maps/search/?api=1&amp;query=45.1314%2C14.7699" target="_blank" rel="noopener">Find us on Google Maps</a></div>
+    <div><a class="btn dark" href="https://www.google.com/maps/search/?api=1&amp;query=Goranska+ulica+21%2C+51250+Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Find us on Google Maps</a></div>
   </div>
-  <div class="locph t" data-i="villaroute"><img src="img/th/villaroute.jpg" alt="Map showing the route from the main E65 road to Villa Vaho"></div>
+  <div class="locph t" data-i="villaroute2"><img src="img/th/villaroute2.jpg" alt="Map showing the route from the main E65 road to Villa Vaho"></div>
 </div></section>
 
 <section class="faq" id="faq"><div class="wrap">
@@ -414,7 +414,7 @@ footer button:hover{color:#fff}
 
 <footer><div class="wrap">
   <a class="logo" href="#top">Villa Vaho</a>
-  <span>Novi Vinodolski, Croatia · © 2026 Villa Vaho</span>
+  <span>Goranska ulica 21, 51250 Novi Vinodolski, Croatia · © 2026 Villa Vaho</span>
   <div class="links"><a href="privacy.html">Privacy policy</a></div>
 </div></footer>
 
@@ -423,7 +423,7 @@ footer button:hover{color:#fff}
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39","oldbalcony","oldpalm"]],["Bedrooms",["oldmain","olddouble","oldtwin","oldtwin2","twin","37","oldgarden","oldview","oldgreen","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100","oldlowerliving","oldkitchen","oldpergolatable"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143","olddeck","oldpergola","oldterraceview","oldtable"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beachaerial","beach","town"]],["Parking",["oldparking"]],["Map",["villaroute"]]];
+const groups=[["Upper apartment",["23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39"]],["Bedrooms",["37","twin","oldtwin","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach, town and map",["beach","town","villaroute2"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
 const $=id=>document.getElementById(id);
 const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
@@ -433,10 +433,19 @@ document.querySelectorAll('.t[data-i]').forEach(t=>{t.tabIndex=0;t.setAttribute(
 $('lbx').onclick=()=>lb.classList.remove('on');
 $('lbp').onclick=()=>show(cur-1);$('lbn').onclick=()=>show(cur+1);
 const ag=$('allg'),agi=$('allgIn');
+const AR={"23":1.498,"28":1.498,"26":1.498,"19":1.498,"31":1.498,"18":1.498,"12":1.498,"16":0.668,"3":1.498,"33":1.498,"35":0.668,"2":0.668,"6":0.668,"8":1.498,"50":0.668,"51":0.668,"11":0.668,"39":0.668,"37":1.498,"twin":1.498,"oldtwin":1.493,"43":0.668,"45":0.668,"38":1.498,"77":1.498,"78":1.498,"70":1.498,"71":1.498,"74":1.498,"91":1.498,"93":1.498,"83":1.498,"81":1.498,"86":0.668,"95":0.668,"97":1.498,"101":1.498,"100":0.668,"57":1.498,"56":1.498,"62":1.498,"63":1.498,"67":1.498,"49":1.498,"58":1.498,"59":1.498,"65":0.668,"68":1.498,"105":1.498,"106":1.498,"107":1.498,"109":1.498,"115":1.498,"117":1.498,"119":1.498,"103":1.498,"112":1.498,"143":1.779,"136":1.779,"140":1.779,"120":1.779,"132":1.779,"130":1.779,"121":1.779,"137":1.779,"129":1.779,"124":0.562,"126":0.562,"138":0.562,"beach":1.782,"town":1.782,"villaroute2":1.273};
 agi.innerHTML=groups.map(g=>'<h4>'+g[0]+'</h4><div class="g">'+g[1].map(n=>'<img loading="lazy" src="img/th/'+n+'.jpg" data-n="'+n+'" alt="" tabindex="0">').join('')+'</div>').join('')+'<div style="height:60px"></div>';
+function justify(){agi.querySelectorAll('.g').forEach(box=>{
+  const cs=getComputedStyle(box),W=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-1,gap=parseFloat(cs.columnGap)||8,H=W<700?170:260;
+  const ims=[...box.children];const rows=[];let row=[],sum=0;
+  ims.forEach(im=>{const a=AR[im.dataset.n]||1.5;row.push([im,a]);sum+=a;if(sum*H+gap*(row.length-1)>=W){rows.push(row);row=[];sum=0}});
+  if(row.length){if(rows.length&&row.reduce((s,r)=>s+r[1],0)*H<W*0.5)rows[rows.length-1].push(...row);else rows.push(row)}
+  rows.forEach(r=>{const s=r.reduce((t,x)=>t+x[1],0),rh=Math.floor((W-gap*(r.length-1))/s);let used=0;
+    r.forEach(([im,a],i)=>{const w=i==r.length-1?W-gap*(r.length-1)-used:Math.floor(a*rh);used+=w;im.style.width=w+'px';im.style.height=rh+'px'})})})}
+addEventListener('resize',()=>{if(ag.classList.contains('on'))justify()});
 agi.querySelectorAll('img').forEach(i=>{i.onclick=()=>show(all.indexOf(i.dataset.n));i.onkeydown=e=>{if(e.key==='Enter')i.onclick()}});
 const closeAll=()=>{ag.classList.remove('on');document.body.style.overflow=''};
-$('openAll').onclick=()=>{ag.classList.add('on');document.body.style.overflow='hidden'};
+$('openAll').onclick=()=>{ag.classList.add('on');document.body.style.overflow='hidden';justify()};
 $('closeAll').onclick=closeAll;
 document.addEventListener('keydown',e=>{
   if(lb.classList.contains('on')){if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);return}
