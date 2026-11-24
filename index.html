@@ -389,7 +389,7 @@ footer button:hover{color:#fff}
     </div>
     <div><a class="btn dark" href="https://www.google.com/maps/search/?api=1&amp;query=45.1314%2C14.7699" target="_blank" rel="noopener">Find us on Google Maps</a></div>
   </div>
-  <div class="locph t" data-i="villamap"><img src="img/th/villamap.jpg" alt="Map of Novi Vinodolski showing where Villa Vaho is"></div>
+  <div class="locph t" data-i="villaroute"><img src="img/th/villaroute.jpg" alt="Map showing the route from the main E65 road to Villa Vaho"></div>
 </div></section>
 
 <section class="faq" id="faq"><div class="wrap">
@@ -423,7 +423,7 @@ footer button:hover{color:#fff}
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39","oldbalcony","oldpalm"]],["Bedrooms",["oldmain","olddouble","oldtwin","oldtwin2","twin","37","oldgarden","oldview","oldgreen","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100","oldlowerliving","oldkitchen","oldpergolatable"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143","olddeck","oldpergola","oldterraceview","oldtable"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beachaerial","beach","town"]],["Parking",["oldparking"]],["Map",["villamap"]]];
+const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39","oldbalcony","oldpalm"]],["Bedrooms",["oldmain","olddouble","oldtwin","oldtwin2","twin","37","oldgarden","oldview","oldgreen","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100","oldlowerliving","oldkitchen","oldpergolatable"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143","olddeck","oldpergola","oldterraceview","oldtable"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beachaerial","beach","town"]],["Parking",["oldparking"]],["Map",["villaroute"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
 const $=id=>document.getElementById(id);
 const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
