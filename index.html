@@ -130,6 +130,12 @@ nav .btn{height:50px;font-size:16px}
 .locph{position:relative;overflow:hidden}
 .locph img{position:absolute;inset:0}
 
+.maps{padding:40px 0 0}
+.mapgrid{display:grid;grid-template-columns:1.94fr 1fr;gap:20px;align-items:stretch}
+.mapgrid .t{border-radius:4px}
+.mapgrid .t:first-child{aspect-ratio:1980/1010}
+.mapgrid .t:last-child img{object-position:left center}
+.mapnote{color:var(--ink2);font-size:15px;margin-top:16px}
 /* faq */
 .faq .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
 .faq h2{font-size:60px}
@@ -198,6 +204,7 @@ footer button:hover{color:#fff}
  .wide{height:380px;min-height:0}
  .todo{grid-template-columns:1fr;gap:34px;margin-top:70px}.todo .ph{height:320px}.todo h3{font-size:34px}
  .loc .in{grid-template-columns:1fr}.loc .txt{padding:70px 20px}.locph{height:340px}
+ .mapgrid{grid-template-columns:1fr;gap:10px}.mapgrid .t:last-child{aspect-ratio:1/1}
  .faq .wrap{grid-template-columns:1fr;gap:28px}.faq h2{font-size:40px}
  summary{padding:20px 22px;font-size:16.5px}details{border-radius:16px;margin-bottom:12px}details p{padding:14px 20px 6px 50px;font-size:16px}details p:before{left:22px;top:12px}
  .contact .wrap{grid-template-columns:1fr;gap:40px}
@@ -392,6 +399,14 @@ footer button:hover{color:#fff}
   <div class="locph t" data-i="121"><img src="img/full/121.jpg" alt="Villa Vaho and its roof terrace seen from directly above"></div>
 </div></section>
 
+<section class="maps"><div class="wrap">
+  <div class="mapgrid">
+    <div class="t" data-i="map"><img src="img/th/map.jpg" alt="Map of Novi Vinodolski showing the location of Villa Vaho"></div>
+    <div class="t" data-i="routemap"><img src="img/th/routemap.jpg" alt="Map of the route from the main E65 road to Villa Vaho"></div>
+  </div>
+  <p class="mapnote">Villa Vaho is on the western edge of Novi Vinodolski. The dotted line on the second map shows the way from the main E65 road to the house.</p>
+</div></section>
+
 <section class="faq" id="faq"><div class="wrap">
   <h2>Frequently asked</h2>
   <div>
@@ -423,7 +438,7 @@ footer button:hover{color:#fff}
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39","oldbalcony","oldpalm"]],["Bedrooms",["oldmain","olddouble","oldtwin","oldtwin2","twin","37","oldgarden","oldview","oldgreen","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100","oldlowerliving","oldkitchen","oldpergolatable"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143","olddeck","oldpergola","oldterraceview","oldtable"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beachaerial","beach","town"]],["Parking",["oldparking"]]];
+const groups=[["Upper apartment",["24","23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39","oldbalcony","oldpalm"]],["Bedrooms",["oldmain","olddouble","oldtwin","oldtwin2","twin","37","oldgarden","oldview","oldgreen","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100","oldlowerliving","oldkitchen","oldpergolatable"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143","olddeck","oldpergola","oldterraceview","oldtable"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Beach and town",["beachaerial","beach","town"]],["Parking",["oldparking"]],["Maps",["map","routemap"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
 const $=id=>document.getElementById(id);
 const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
