@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Villa Vaho · Novi Vinodolski, Kroatien</title>
+<meta name="description" content="Villa Vaho, ein modernes mediterranes Familienhaus mit Blick auf die Adria und die Insel Krk in Novi Vinodolski, Kroatien. Bis zu 10 Gäste, ummauerter Garten, Dachterrasse, 5 Minuten zum Strand.">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="de" href="de.html">
+<link rel="alternate" hreflang="it" href="it.html">
+<link rel="preload" href="fonts/prata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--ink:#1B1B1B;--ink2:#5E5E5E;--line:#E6E6E6;--soft:#F5F5F5;--acc:#1B1B1B;--w:1440px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:100px}
+@media(max-width:860px){[id]{scroll-margin-top:70px}}
+body{background:#fff;color:var(--ink);font:400 17.5px/1.6 "Manrope",sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Prata",serif;font-weight:400;letter-spacing:-.01em;line-height:1.12}
+h2{font-size:60px}h2 em,h1 em{font-style:normal;color:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 128px}
+.lead{color:var(--ink2);font-size:19px;max-width:660px}
+.center{text-align:center}.center .lead{margin:20px auto 0}
+.btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;border-radius:99px;border:1.5px solid var(--ink);font:600 16px "Manrope";cursor:pointer;background:none;color:var(--ink);transition:.2s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{background:#000}
+section{padding:120px 0}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100px}
+.logo{font:400 28px "Prata";letter-spacing:0}
+nav ul{display:flex;gap:32px;list-style:none;font:500 16px "Manrope";color:var(--ink2)}
+nav ul a:hover,nav ul a.on{color:var(--ink)}
+nav .btn{height:50px;font-size:16px}
+.navr{display:flex;align-items:center;gap:24px}
+.langs{display:flex;gap:4px;font:500 14px "Manrope"}
+.langs a{color:var(--ink2);padding:6px 7px;border-radius:6px}
+.langs a:hover{color:var(--ink)}
+.langs a.on{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.mlangs{margin-top:34px;font-size:18px;gap:10px}
+.menu{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-right:-10px}
+.menu span{display:block;width:26px;height:12px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:30;display:none;flex-direction:column;padding:24px 20px}
+.mnav.on{display:flex}
+.mnav .top{display:flex;justify-content:space-between;align-items:center;height:46px}
+.mnav .x{background:none;border:0;font-size:30px;cursor:pointer;line-height:1}
+.mnav ul{list-style:none;margin-top:40px}
+.mnav li a{display:block;font:400 34px/1.2 "Prata";padding:10px 0}
+.mnav .btn{margin-top:30px;align-self:flex-start}
+/* hero */
+.hero{padding:24px 0 0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.45fr;gap:72px;align-items:center;max-width:none;padding-right:0;padding-left:max(128px,calc((100vw - var(--w))/2 + 128px))}
+.hero .where{font-size:15px;color:var(--ink2);margin-bottom:26px;display:flex;align-items:center;gap:10px}
+
+.hero h1{font-size:76px;margin-bottom:30px}
+.hero .lead{margin-bottom:44px;max-width:540px}
+.hero .ph{height:calc(100vh - 124px);min-height:640px;max-height:900px}
+/* welcome */
+.welcome .wrap{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.welcome h2{position:sticky;top:140px}
+.welcome p{color:var(--ink2);font-size:19px;margin-bottom:22px}
+.welcome p:first-child:first-letter{font:400 64px/0.9 "Prata";float:left;margin:6px 12px 0 0;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px}
+.stats b{display:block;font:400 36px "Prata"}
+.stats span{font-size:14px;color:var(--ink2)}
+.wide{height:78vh;min-height:520px;max-height:860px;overflow:hidden;cursor:zoom-in}
+/* rooms rows */
+.house{padding-top:40px}
+.row{display:grid;grid-template-columns:1.25fr 1fr;gap:90px;align-items:center;margin-top:110px}
+.row.rev{grid-template-columns:1fr 1.25fr}.row.rev .pics{order:2}
+.pics{display:grid;grid-template-columns:2fr 1fr;gap:16px;height:600px}
+.pics .side{display:grid;gap:16px}
+.pics.two{grid-template-columns:1fr;grid-template-rows:1fr 1fr;height:auto}
+.pics.two>div{aspect-ratio:3/2}
+.pics>div,.pics .side>div{overflow:hidden;border-radius:4px}
+.row .no{font:600 15px "Manrope";color:var(--acc);margin-bottom:14px;letter-spacing:.1em}
+.row h3{font-size:44px;margin-bottom:22px}
+.row p{color:var(--ink2);font-size:18px;margin-bottom:16px}
+.ticks{list-style:none;margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.ticks li{padding:8px 16px;background:var(--soft);border-radius:99px;font-size:15px}
+
+.beds{margin-top:120px}
+.beds h3{font-size:44px}
+.bedgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.bedgrid .t{aspect-ratio:3/4;border-radius:4px}
+/* band */
+.band{position:relative;height:640px;color:#fff;overflow:hidden;padding:0}
+.band img{position:absolute;inset:0}
+.band:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45))}
+.band .q{position:absolute;z-index:2;left:0;right:0;bottom:70px;text-align:center;padding:0 20px}
+.band blockquote{font:400 44px/1.25 "Prata";max-width:900px;margin:0 auto}
+/* glance */
+.glance .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 60px;margin-top:70px;align-items:start}
+.gl{padding:10px 6px}
+.gl svg{width:30px;height:30px;stroke:var(--acc);fill:none;stroke-width:1.5;margin-bottom:22px}
+.gl h4{font:400 24px "Prata";margin-bottom:10px}
+.gl p{color:var(--ink2);font-size:16px}
+.gl.photo{padding:0;overflow:hidden;border-radius:20px;height:100%;min-height:240px}
+/* gallery */
+.mosaic{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin-top:64px}
+.mosaic .col{display:grid;gap:20px}
+.mosaic .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.t{cursor:zoom-in;overflow:hidden;border-radius:4px}
+.t img{transition:transform .6s}.t:hover img{transform:scale(1.03)}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:20px}
+.row3 .t{aspect-ratio:4/3}
+.gbtn{text-align:center;margin-top:48px}
+/* facilities */
+.fac{display:grid;grid-template-columns:repeat(5,1fr);row-gap:60px;margin-top:80px;text-align:center}
+.fac div{color:var(--ink2);font-size:17px}
+.fac svg{width:30px;height:30px;stroke:var(--acc);fill:none;stroke-width:1.5;margin:0 auto 16px;display:block}
+/* novi story */
+.story{background:#fff;padding-top:40px}
+.story .top{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end;margin-bottom:80px}
+.story .top p{color:var(--ink2);font-size:18px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.fact{background:var(--soft);border-radius:20px;padding:34px 30px 36px}
+.fact .yr{font:400 44px "Prata";color:var(--acc);line-height:1;margin-bottom:18px}
+.fact h4{font:400 21px "Prata";margin-bottom:10px}
+.fact p{color:var(--ink2);font-size:15.5px}
+.todo{display:grid;grid-template-columns:1.1fr 1fr;gap:90px;align-items:center;margin-top:120px}
+.todo .ph{height:560px;border-radius:4px;overflow:hidden}
+.todo h3{font-size:44px;margin-bottom:26px}
+.todo dl{}
+.todo dt{font:400 19px "Prata";padding-top:18px}
+.todo dd{color:var(--ink2);font-size:16px;padding-bottom:14px}
+.strip{display:grid;grid-template-columns:1fr 2fr 1fr;gap:20px;height:520px;margin-top:24px}
+.strip>div{border-radius:20px;overflow:hidden}
+/* location */
+.loc{padding:0}
+.loc .in{display:grid;grid-template-columns:1fr 1.35fr;min-height:760px}
+.loc .txt{padding:110px 80px 110px max(128px,calc((100vw - var(--w))/2 + 128px));display:flex;flex-direction:column;justify-content:center}
+.loc .txt .lead{margin:26px 0 34px;font-size:18px}
+.dist{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-bottom:40px}
+.dist b{display:block;font:400 26px "Prata"}
+.dist span{font-size:14px;color:var(--ink2)}
+.locph{position:relative;overflow:hidden;align-self:center;aspect-ratio:2800/2200;border-radius:4px 0 0 4px}
+.locph img{position:absolute;inset:0}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
+.faq h2{font-size:60px}
+details{background:var(--soft);border-radius:20px;margin-bottom:20px}
+summary{list-style:none;cursor:pointer;padding:30px 36px;font-size:19px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"";width:10px;height:10px;border-right:2px solid #888;border-bottom:2px solid #888;transform:rotate(45deg);transition:.2s;flex:none;margin-top:-6px}
+details[open] summary:after{transform:rotate(-135deg);margin-top:4px}
+details[open]{background:none}
+details[open] summary{background:var(--soft);border-radius:20px}
+details p{padding:20px 36px 12px 64px;color:var(--ink2);font-size:18px;position:relative}
+details p:before{content:"↳";position:absolute;left:34px;top:18px;color:#999}
+/* contact */
+.contact{}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:60px;align-items:start}
+.person h4{font:600 20px "Manrope";margin-bottom:4px}
+.person .role{color:var(--ink2);font-size:15px;margin-bottom:18px}
+.person p{font-size:16px;line-height:2}
+.person p span{color:var(--ink2);display:inline-block;width:72px;vertical-align:top}
+.person p a{display:inline-block;max-width:calc(100% - 80px);vertical-align:top;line-height:1.5;padding:4px 0}
+.person a:hover,.legal a:hover{text-decoration:underline}
+.book{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+.book .btn{height:48px;font-size:15px}
+footer{background:var(--ink);color:#bbb;padding:44px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .logo{color:#fff;font-size:18px}
+footer a:hover{color:#fff}
+footer nav,footer .links{display:flex;gap:22px;flex-wrap:wrap;position:static;background:none;backdrop-filter:none}
+footer button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
+footer button:hover{color:#fff}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(15,15,15,.96);z-index:50;display:none;flex-direction:column}
+.lb.on{display:flex}
+.lb .bar{display:flex;justify-content:space-between;align-items:center;color:#fff;padding:18px 26px;font-size:15px}
+.lb .x{background:none;border:0;color:#fff;font-size:30px;cursor:pointer;line-height:1}
+.lb .stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;padding:0 80px 30px;min-height:0}
+.lb .stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;width:52px;height:52px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb .prev{left:18px}.lb .next{right:18px}
+.allg{position:fixed;inset:0;background:#fff;z-index:40;overflow:auto;display:none}
+.allg.on{display:block}
+.allg .head .logo{font-size:22px!important}
+.allg .head{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;z-index:2}
+.allg h4{font:400 30px "Prata";margin:44px 40px 20px}
+.allg .g{display:flex;flex-wrap:wrap;gap:8px;padding:0 40px}
+.allg .g img{display:block;flex:none;object-fit:cover;cursor:zoom-in;border-radius:3px}
+/* responsive */
+@media(max-width:1200px){.wrap{padding:0 56px}.hero .wrap{padding-left:56px}.loc .txt{padding-left:56px}.hero h1{font-size:64px}h2{font-size:46px}nav ul{gap:20px}.row,.todo{gap:56px}.facts{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){
+ body{font-size:17px}.wrap{padding:0 20px}section{padding:76px 0}h2{font-size:38px}.lead{font-size:17px}
+ nav .wrap{height:70px}.logo{font-size:19px}nav ul,nav .btn,.navr{display:none}
+ .menu{display:block}
+ .hero{padding:6px 0 0}.hero .wrap{grid-template-columns:1fr;gap:34px;padding:0 20px}
+ .hero h1{font-size:44px;margin-bottom:18px}.hero .lead{margin-bottom:28px}
+ .hero .ph{height:440px;min-height:0;border-radius:4px;overflow:hidden}
+ .welcome .wrap{grid-template-columns:1fr;gap:30px}.welcome h2{position:static}.welcome p{font-size:17px}
+ .stats{grid-template-columns:1fr 1fr;row-gap:20px}.stats b{font-size:30px}
+ .house{padding-top:0}.row,.row.rev{grid-template-columns:1fr;gap:30px;margin-top:70px}.row.rev .pics{order:0}
+ .pics{height:380px;gap:10px}.pics.two{height:auto}.pics .side{gap:10px}.row h3{font-size:34px}.row p{font-size:16px}
+ .beds{margin-top:70px}.beds h3{font-size:34px}.bedgrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+ .band{height:460px}.band blockquote{font-size:28px}.band .q{bottom:44px}
+ .glance .grid{grid-template-columns:1fr;gap:16px;margin-top:40px}.gl.photo{height:280px}
+ .mosaic{grid-template-columns:1fr;gap:10px;margin-top:40px}.mosaic .col,.mosaic .two{gap:10px}.row3{gap:10px;margin-top:10px;grid-template-columns:1fr 1fr}.row3 .t:last-child{display:none}
+ .fac{grid-template-columns:repeat(2,1fr);row-gap:38px;margin-top:48px}.fac div{font-size:15px}
+ .story .top{grid-template-columns:1fr;gap:20px;margin-bottom:40px}.facts{grid-template-columns:1fr;gap:14px}
+ .strip{grid-template-columns:1fr 1fr;height:auto}.strip>div{height:260px}.strip>div:nth-child(2){grid-column:1/-1;order:-1}
+ .wide{height:380px;min-height:0}
+ .todo{grid-template-columns:1fr;gap:34px;margin-top:70px}.todo .ph{height:320px}.todo h3{font-size:34px}
+ .loc .in{grid-template-columns:1fr}.loc .txt{padding:70px 20px}.locph{border-radius:0}
+ .faq .wrap{grid-template-columns:1fr;gap:28px}.faq h2{font-size:40px}
+ summary{padding:20px 22px;font-size:16.5px}details{border-radius:16px;margin-bottom:12px}details p{padding:14px 20px 6px 50px;font-size:16px}details p:before{left:22px;top:12px}
+ .contact .wrap{grid-template-columns:1fr;gap:40px}
+ .lb .stage{padding:0 10px 20px}.lb .nav{display:none}
+ .allg .g{padding:0 14px;gap:6px}.allg h4{margin:30px 14px 14px;font-size:24px}.allg .head .logo{font-size:22px!important}
+.allg .head{padding:14px}
+}
+
+.t:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+</style></head><body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Villa Vaho</a>
+  <ul><li><a class="on" href="#top">Start</a></li><li><a href="#house">Das Haus</a></li><li><a href="#gallery">Galerie</a></li><li><a href="#novi">Novi Vinodolski</a></li><li><a href="#location">Lage</a></li><li><a href="#faq">FAQ</a></li></ul>
+  <div class="navr"><div class="langs" aria-label="Sprache"><a href="index.html" hreflang="en" lang="en">EN</a><a href="de.html" hreflang="de" lang="de" class="on">DE</a><a href="it.html" hreflang="it" lang="it">IT</a></div><a class="btn dark" href="#contact">Jetzt buchen</a></div>
+  <button class="menu" id="menuBtn" aria-label="Menü öffnen" aria-expanded="false"><span></span></button>
+</div></nav>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="top"><a class="logo" href="#top">Villa Vaho</a><button class="x" id="menuClose" aria-label="Menü schließen">✕</button></div>
+  <ul><li><a href="#top">Start</a></li><li><a href="#house">Das Haus</a></li><li><a href="#gallery">Galerie</a></li><li><a href="#novi">Novi Vinodolski</a></li><li><a href="#location">Lage</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Kontakt</a></li></ul>
+  <a class="btn dark" href="#contact">Jetzt buchen</a>
+  <div class="langs mlangs" aria-label="Sprache"><a href="index.html" hreflang="en" lang="en">EN</a><a href="de.html" hreflang="de" lang="de" class="on">DE</a><a href="it.html" hreflang="it" lang="it">IT</a></div>
+</div>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="where">Novi Vinodolski · Kroatien</div>
+    <h1>Eine Villa mit Blick auf die <em>Adria</em></h1>
+    <p class="lead">Die Villa Vaho liegt am nördlichen Rand des kleinen Städtchens Novi Vinodolski. Zum Strand sind es nur 5 Minuten zu Fuß, und von hier aus genießen Sie einen weiten Blick über die Adria und die Insel Krk.</p>
+    <a class="btn dark" href="#house">Das Haus entdecken</a>
+  </div>
+  <div class="ph"><img src="img/full/136.jpg" alt="Die Kvarner-Bucht und die Insel Krk von oberhalb der Villa Vaho"></div>
+</div></header>
+
+<section class="welcome" id="welcome"><div class="wrap">
+  <div><h2>Ein modernes mediterranes Haus</h2></div>
+  <div>
+    <p>Die Villa Vaho wurde Ende der 60er-Jahre von meinem Vater, einem Architekten, entworfen und gebaut und Anfang der 70er-Jahre im modernen mediterranen Stil fertiggestellt. Sie liegt 30 Gehminuten entlang der Küste vom Zentrum von Novi Vinodolski entfernt, in einer Gegend, in der zuerst Ferienhäuser und Villen von Akademikerfamilien, vor allem aus Zagreb, entstanden.</p>
+    <p>Das Haus hat einen Vorder- und einen Hintergarten. Es ist auf zwei Ebenen in den Hang gebaut und dadurch in zwei getrennte Wohnungen geteilt. Im Garten wachsen alte Bäume, darunter Feigen, Granatäpfel und ein großer Mandelbaum, dazu verschiedene Sträucher und duftende Kräuter.</p>
+    <p>Die Villa Vaho ist von einem großen ummauerten Garten umgeben, der für kleine Kinder und Haustiere sicher ist. Die Villa ist ideal für Familien mit Kindern oder auch für zwei Familien.</p>
+    <div class="stats">
+      <div><b>10</b><span>Gäste</span></div>
+      <div><b>4</b><span>Schlafzimmer</span></div>
+      <div><b>2</b><span>Badezimmer</span></div>
+      <div><b>200 m²</b><span>Wohnfläche</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="wide t" data-i="132" tabindex="0" role="button" aria-label="Foto öffnen"><img src="img/full/132.jpg" alt="Die Villa Vaho von oben, umgeben von ihrem Garten"></div>
+
+<section class="house" id="house"><div class="wrap">
+  <div class="row">
+    <div class="pics two">
+      <div class="t" data-i="19"><img src="img/full/19.jpg" alt="Wohnbereich mit Kamin in der oberen Wohnung"></div>
+      <div class="t" data-i="12"><img src="img/full/12.jpg" alt="Essbereich in der oberen Wohnung"></div>
+    </div>
+    <div>
+      <h3>Die obere Wohnung</h3>
+      <p>Die obere Wohnung hat drei Doppelzimmer, alle mit Klimaanlage, und einen großen Wohnbereich mit Balkonterrasse. Alle Räume haben Meerblick. Es gibt eine voll ausgestattete Küche mit Geschirrspüler und Waschmaschine, einen Essbereich, ein Badezimmer, ein separates WC und einen Abstellraum. Die Wohnung bietet Platz für 6 Personen.</p>
+      <p>Die Küchentür führt in den Vordergarten mit Essplatz im Freien und gemauertem Grill. Im ganzen Haus gibt es WLAN.</p>
+      <ul class="ticks"><li>6 Personen</li><li>3 Doppelzimmer mit Klimaanlage</li><li>Meerblick aus allen Räumen</li><li>Balkonterrasse</li></ul>
+    </div>
+  </div>
+  <div class="row rev">
+    <div class="pics">
+      <div class="t" data-i="70"><img src="img/full/70.jpg" alt="Tisch unter der Weinlaube"></div>
+      <div class="side"><div class="t" data-i="91"><img src="img/th/91.jpg" alt="Offener Wohnraum der unteren Wohnung"></div><div class="t" data-i="83"><img src="img/th/83.jpg" alt="Küche der unteren Wohnung"></div></div>
+    </div>
+    <div>
+      <h3>Die untere Wohnung</h3>
+      <p>Die untere Wohnung hat einen großen offenen Wohn-, Koch- und Essbereich, der auch als zusätzlicher Schlafplatz genutzt werden kann, ein Schlafzimmer und ein Badezimmer. Sie ist klimatisiert und bietet Platz für bis zu 4 Personen.</p>
+      <p>Von der Wohnung gelangt man auf eine Rasenfläche mit gepflastertem Essplatz unter einer hölzernen, mit Wein bewachsenen Pergola. Auch hier hat man einen herrlichen Blick auf die Adria.</p>
+      <ul class="ticks"><li>Bis zu 4 Personen</li><li>1 Doppelzimmer</li><li>Klimaanlage</li><li>Rasen und Weinlaube</li></ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pics">
+      <div class="t" data-i="105"><img src="img/full/105.jpg" alt="Überdachte Pergola und Lounge auf der Dachterrasse"></div>
+      <div class="side"><div class="t" data-i="59"><img src="img/th/59.jpg" alt="Hängematte im ummauerten Garten"></div><div class="t" data-i="65"><img src="img/th/65.jpg" alt="Gemauerter Grill im Garten"></div></div>
+    </div>
+    <div>
+      <h3>Dachterrasse und Garten</h3>
+      <p>Über der oberen Etage liegt eine riesige Terrasse mit überdachter Pergola und Essbereich, ideal zum Sonnenbaden, Entspannen und Genießen der Aussicht.</p>
+      <p>Im Garten gibt es Hängematten, Liegestühle und Sonnenschirme. Vor dem Haus stehen 3 Parkplätze zur Verfügung.</p>
+      <ul class="ticks"><li>Überdachter Essplatz auf dem Dach</li><li>Gemauerter Grill</li><li>Hängematten, Liegestühle und Sonnenschirme</li><li>Parkplatz für 3 Autos</li></ul>
+    </div>
+  </div>
+  <div class="beds">
+    <div class="center"><h3>Die Schlafzimmer</h3><p class="lead">Drei Doppelzimmer in der oberen Wohnung und eines in der unteren, alle mit Klimaanlage.</p></div>
+    <div class="bedgrid">
+      <div class="t" data-i="37"><img src="img/th/37.jpg" alt="Doppelzimmer mit gemusterter Tapete"></div>
+      <div class="t" data-i="twin"><img src="img/th/twin.jpg" alt="Zweibettzimmer mit grünen Kissen"></div>
+      <div class="t" data-i="oldtwin"><img src="img/th/oldtwin.jpg" alt="Zweibettzimmer mit gelber Bettwäsche und Meerblick"></div>
+      <div class="t" data-i="77"><img src="img/th/77.jpg" alt="Doppelzimmer in der unteren Wohnung"></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><img src="img/full/140.jpg" alt="Die Küste von Novi Vinodolski und die Kvarner-Bucht von oben">
+  <div class="q"><blockquote>Ein weiter Blick über die Adria und die Insel Krk.</blockquote></div>
+</section>
+
+<section class="glance"><div class="wrap">
+  <div class="center"><h2>Gut zu wissen</h2></div>
+  <div class="grid">
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M3 18c3-2 6-2 9 0s6 2 9 0M3 13c3-2 6-2 9 0s6 2 9 0"/></svg><h4>Strand in der Nähe</h4><p>Der nächste Strand liegt 50 Meter den Hang hinunter, etwa 5 Minuten entfernt. Entlang der 6 km langen Küste gibt es verschiedene Strände, meist Fels-, Kies- oder befestigte Strände. Ein Strand in der Stadt ist ein Sandstrand.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h4>Zentrale Lage</h4><p>Das Haus liegt 2 km vor der westlichen Ortseinfahrt, 30 Gehminuten entlang der Küste. Es ist von der Hauptstraße E65 aus gut erreichbar, etwa 500 m nach der Abzweigung.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 16h20M4 16v4M20 16v4M4 16V8h16v8M8 12h8"/></svg><h4>Unterkunft</h4><p>Das Haus bietet Platz für 8 bis 10 Personen: oben für 6 Personen, unten für 2 Erwachsene und 2 Kinder. Oben gibt es Geschirrspüler, Waschmaschine und Mikrowelle. Kostenloses WLAN und mehrere Klimaanlagen im ganzen Haus.</p></div>
+    <div class="gl photo t" data-i="68"><img src="img/th/68.jpg" alt="Eine Katze ruht im Garten"></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 20 9 8l4 6 3-4 6 10z"/></svg><h4>Erleben</h4><p>Die Gegend bietet kristallklares Meer, Wanderungen in Bergen und Wäldern, Bootsausflüge zu den nahen Inseln, organisierte Besuche von Kulturstätten, zahlreiche Restaurants mit lokalen Spezialitäten und viele Bars, in denen Sie bei Ihrem Lieblingsgetränk oder Cocktail entspannen können.</p></div>
+    <div class="gl"><svg viewBox="0 0 24 24"><path d="M2 13l20-6-6 13-3-6z"/></svg><h4>Nächster Flughafen</h4><p>Der nächste Flughafen ist der Flughafen Rijeka auf der Insel Krk, 30 km vom Haus entfernt. Der Flughafen Pula ist 150 km, der Flughafen Zagreb 200 km entfernt.</p></div>
+  </div>
+</div></section>
+
+<section id="gallery" style="padding-top:20px"><div class="wrap">
+  <div class="center"><h2>Schauen Sie sich um</h2>
+  <p class="lead">Terrazzoböden, gemusterte Tapeten, Regale voller Bücher und Muscheln und das Meer in fast jedem Fenster.</p></div>
+  <div class="mosaic">
+    <div class="t" data-i="74"><img src="img/full/74.jpg" alt="Die untere Wohnung mit Zugang zum Garten unter der Pergola"></div>
+    <div class="col">
+      <div class="t" data-i="57"><img src="img/th/57.jpg" alt="Frühstückstisch im Garten"></div>
+      <div class="two"><div class="t" data-i="33"><img src="img/th/33.jpg" alt="Wohnzimmer mit Büchern und einem Gemälde"></div><div class="t" data-i="3"><img src="img/th/3.jpg" alt="Küche in der oberen Wohnung"></div></div>
+    </div>
+  </div>
+  <div class="row3">
+    <div class="t" data-i="115"><img src="img/th/115.jpg" alt="Liegestühle und ein gelber Sonnenschirm auf der Dachterrasse"></div>
+    <div class="t" data-i="35"><img src="img/th/35.jpg" alt="Schaukelstuhl am Fenster"></div>
+    <div class="t" data-i="49"><img src="img/th/49.jpg" alt="Liegestühle auf dem Rasen"></div>
+  </div>
+  <div class="gbtn"><button class="btn" id="openAll">Weitere Fotos ansehen</button></div>
+</div></section>
+
+<section id="facilities" style="padding-top:20px"><div class="wrap">
+  <div class="center"><h2>Alles für einen langen Sommer</h2></div>
+  <div class="fac">
+    <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="8" rx="1"/><path d="M7 17v2M12 16v4M17 17v2"/></svg>Klimaanlage</div>
+    <div><svg viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r=".8"/></svg>Kostenloses WLAN</div>
+    <div><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M8 5.5h2"/></svg>Geschirrspüler</div>
+    <div><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="12" cy="13" r="4"/><path d="M8 6h2"/></svg>Waschmaschine</div>
+    <div><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><rect x="6" y="9" width="9" height="6"/><path d="M18 10v4"/></svg>Mikrowelle</div>
+    <div><svg viewBox="0 0 24 24"><path d="M4 10h16a8 8 0 0 1-16 0zM8 18l-2 3M16 18l2 3M9 3c0 2 2 2 2 4M13 3c0 2 2 2 2 4"/></svg>Gemauerter Grill</div>
+    <div><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M3 21h18M9 21v-6h6v6"/></svg>Ummauerter Garten</div>
+    <div><svg viewBox="0 0 24 24"><path d="M2 8c5 6 15 6 20 0M2 8v2M22 8v2M5 11l-1 10M19 11l1 10"/></svg>Hängematten</div>
+    <div><svg viewBox="0 0 24 24"><path d="M5 17h14l-1.5-6h-11zM7 17v2M17 17v2M8 11l1.5-4h5L16 11"/></svg>Parkplatz für 3 Autos</div>
+    <div><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="1.6"/><circle cx="12" cy="6" r="1.6"/><circle cx="17" cy="8" r="1.6"/><path d="M8 17c0-3 2-6 4-6s4 3 4 6c0 2-8 2-8 0z"/></svg>Hunde erlaubt</div>
+  </div>
+</div></section>
+
+<section class="story" id="novi"><div class="wrap">
+  <div class="top">
+    <div><h2>Novi Vinodolski</h2></div>
+    <p>Die Stadt Novi Vinodolski liegt 50 km südlich von Rijeka im nördlichen Teil der kroatischen Adria. Sie entstand auf dem Hügel über einem kleinen Hafen, am Meereszugang des langen Tals (Vialis vinearia), das einst die Bevölkerung ernährte und für seine Reben bekannt war. Daher der Name Vino-dol, das Weintal. Bis heute wird hier Wein gemacht, und Geschäfte und Restaurants verkaufen und servieren den lokalen Wein.</p>
+  </div>
+  <div class="facts">
+    <div class="fact"><div class="yr">13. Jh.</div><h4>Das Vinodoler Gesetzbuch</h4><p>Verfasst vom Haus Frankopan, einem kroatischen Adelsgeschlecht, in alter glagolitischer Schrift. Es war das erste kroatische Rechtsdokument, das die regionale Eigenständigkeit belegt.</p></div>
+    <div class="fact"><div class="yr">16. Jh.</div><h4>Die Habsburger</h4><p>Die Habsburger übernahmen die Region und begannen im 19. Jahrhundert, hier den Tourismus zu entwickeln. Das klare Meer und die nahen Berge lockten Adelige an, die hier ihre Sommerhäuser bauten.</p></div>
+    <div class="fact"><div class="yr">60er &amp; 70er</div><h4>Ferienhäuser</h4><p>Die Tradition setzte sich fort, als Jugoslawien den Tourismus förderte und Akademiker Grundstücke erwerben und Ferienhäuser bauen konnten.</p></div>
+    <div class="fact"><div class="yr">Heute</div><h4>Familienurlaub</h4><p>Die Stadt und die Umgebung sind auf Familienurlaub ausgerichtet, mit zahlreichen Privatunterkünften und Hotels sowie zwei Marinas für Gäste, die mit dem Boot kommen.</p></div>
+  </div>
+  <div class="strip">
+    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Felsstrand und klares Wasser bei Novi Vinodolski"></div>
+    <div class="t" data-i="126"><img src="img/full/126.jpg" alt="Die Küste von Novi Vinodolski von oben"></div>
+    <div class="t" data-i="town"><img src="img/th/town.jpg" alt="Hafen und Altstadt von Novi Vinodolski"></div>
+  </div>
+  <div class="todo">
+    <div class="ph t" data-i="112"><img src="img/full/112.jpg" alt="Zwei Stühle auf der Terrasse mit Blick aufs Meer"></div>
+    <div>
+      <h3>Aktivitäten in der Umgebung</h3>
+      <dl>
+        <dt>Am Wasser</dt><dd>Das kristallklare Meer lädt zum Schwimmen, Schnorcheln, Tauchen, Segeln und Jetskifahren ein. Bootsausflüge sind eine beliebte Art, die Küste und die nahen Inseln zu erkunden. Die Insel Krk ist 20 km entfernt und reich an Kulturerbe, Weinbau und Naturschönheiten.</dd>
+        <dt>Geschichte und Kultur</dt><dd>Die Frankopanen errichteten die Zitadelle mit ihrer Festung, und ihre prächtigen Bauten, Kirchen und Burgen können heute in der ganzen Gegend besichtigt werden. Das Stadtmuseum und die Sommerfeste zeigen Novis lange Geschichte, Kultur und Bräuche, und jedes Jahr organisiert der Tourismusverband klassische Konzerte, Festivals, Stadtführungen und Ausstellungen.</dd>
+        <dt>Für Aktive</dt><dd>Die umliegenden Berge bieten kühlere Wander- und Radwege. Entdecken Sie mehrere Nationalparks und Seen, das Učka-Gebirge, die Halbinsel Istrien und sogar Venedig, nur 3 Autostunden entfernt.</dd>
+        <dt>Kulinarisches</dt><dd>Die lokale Küche ist reichhaltig und vielfältig. Es gibt zahlreiche Restaurants mit vorwiegend traditioneller kontinentaler und mediterraner Küche wie gegrilltem Fleisch oder Fisch. Italienische Küche ist leicht zu finden, und einige Jägerhütten bieten Wildgerichte an.</dd>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<section class="loc" id="location"><div class="in">
+  <div class="txt">
+    <h2>Anreise</h2>
+    <p class="lead">Ein kleiner, gut sortierter Laden ist 10 Gehminuten entfernt. In der Stadt gibt es 4 Supermärkte, eine große Drogerie, 2 Tankstellen, eine Apotheke, 2 Banken, mehrere Geldautomaten, einen Busbahnhof, Wechselstuben, einen kleinen Lebensmittelmarkt und verschiedene kleinere Geschäfte, viele davon mit Strandartikeln.</p>
+    <div class="dist">
+      <div><b>50 m</b><span>Nächster Strand</span></div><div><b>30 min</b><span>Zu Fuß ins Zentrum</span></div>
+      <div><b>30 km</b><span>Flughafen Rijeka</span></div><div><b>50 km</b><span>Stadt Rijeka</span></div>
+    </div>
+    <div><a class="btn dark" href="https://www.google.com/maps/search/?api=1&amp;query=Goranska+ulica+21%2C+51250+Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Auf Google Maps ansehen</a></div>
+  </div>
+  <div class="locph t" data-i="villaroute2-de"><img src="img/th/villaroute2-de.jpg" alt="Karte mit dem Weg von der Hauptstraße E65 zur Villa Vaho"></div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+  <h2>Häufige Fragen</h2>
+  <div>
+    <details open><summary>Wie lange können wir bleiben?</summary><p>In der Saison können Sie so lange bleiben, wie Sie möchten, jedoch ohne Preisnachlass. Im Frühling und Herbst sind die Preise bei Aufenthalten von mehr als zwei Wochen verhandelbar.</p></details>
+    <details><summary>Wie lange ist der Mindestaufenthalt?</summary><p>Der Mindestaufenthalt beträgt 6 Tage.</p></details>
+    <details><summary>Wie viele Personen finden im Haus Platz?</summary><p>Das Haus bietet Platz für bis zu 10 Personen. 8 Personen schlafen in eigenen Zimmern, 2 weitere, meist Kinder, auf den Schlafsofas im offenen Wohnraum.</p></details>
+    <details><summary>Was kostet das ganze Haus?</summary><p>Die Preise richten sich nach der Saison und liegen zwischen 250 und 350 Euro für das ganze Haus. Bitte nennen Sie uns Ihre Wunschtermine, dann teilen wir Ihnen den genauen Preis mit.</p></details>
+    <details><summary>Gibt es Parkplätze?</summary><p>Vor dem Haus gibt es kostenlose Parkplätze für 3 Autos an der Straße.</p></details>
+    <details><summary>Dürfen wir Haustiere mitbringen?</summary><p>Hunde sind erlaubt, es fällt jedoch ein Aufpreis von 5 Euro pro Hund an.</p></details>
+    <details><summary>Wie können wir buchen?</summary><p>Sie können über <a href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener" style="text-decoration:underline">Booking.com</a> oder <a href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener" style="text-decoration:underline">Airbnb</a> buchen oder uns direkt per Telefon oder E-Mail kontaktieren.</p></details>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div><h2>Kontakt</h2><p class="lead" style="margin-top:18px">Bei Fragen oder für eine Reservierung kontaktieren Sie uns bitte.</p>
+    <div class="book"><a class="btn" href="https://www.booking.com/hotel/hr/vaho-holiday-home.html" target="_blank" rel="noopener">Booking.com</a><a class="btn" href="https://www.airbnb.com/rooms/2925426" target="_blank" rel="noopener">Airbnb</a></div></div>
+  <div class="person"><h4>Lana Haynes Hodžić</h4><div class="role">Villa Vaho</div><p><span>Telefon</span><a href="tel:+385917616797">+385 91 761 6797</a><br><span>E-Mail</span><a href="mailto:info@villavaho.com">info@villavaho.com</a><br><span>Adresse</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Goranska+ulica+21%2C+51250+Novi+Vinodolski%2C+Croatia" target="_blank" rel="noopener">Goranska ulica 21, 51250 Novi Vinodolski, Kroatien</a></p></div>
+  <div class="person"><h4>Adriagate</h4><div class="role">Reiseagentur</div><p><span>Telefon</span><a href="tel:+38551785305">+385 51 785 305</a><br><span>Mobil</span><a href="tel:+385955735667">+385 95 573 5667</a><br><span>E-Mail</span><a href="mailto:info@adriagate.com">info@adriagate.com</a></p></div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="logo" href="#top">Villa Vaho</a>
+  <span>Goranska ulica 21, 51250 Novi Vinodolski, Kroatien · © 2026 Villa Vaho</span>
+  <div class="links"><a href="privacy-de.html">Datenschutz</a></div>
+</div></footer>
+
+
+<div class="allg" id="allg"><div class="head"><span class="logo">Villa Vaho Fotos</span><button class="btn" id="closeAll" style="height:44px">Schließen ✕</button></div><div id="allgIn"></div></div>
+<div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Schließen">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Zurück">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Weiter">→</button></div></div>
+
+<script>
+const groups=[["Obere Wohnung",["23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39"]],["Schlafzimmer",["37","twin","oldtwin","43","45","38","77","78"]],["Untere Wohnung",["70","71","74","91","93","83","81","86","95","97","101","100"]],["Garten",["57","56","62","63","67","49","58","59","65","68"]],["Dachterrasse",["105","106","107","109","115","117","119","103","112","143"]],["Von oben",["136","140","120","132","130","121","137","129","124","126","138"]],["Parkplatz, Strand und Stadt",["oldparking","beach","town","villaroute2-de"]]];
+const all=groups.flatMap(g=>g[1]);let cur=0;
+const $=id=>document.getElementById(id);
+const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
+function show(i){if(i<0&&!lb.classList.contains('on'))i=0;cur=(i+all.length)%all.length;lbi.src='img/full/'+all[cur]+'.jpg';lbc.textContent=(cur+1)+' / '+all.length;lb.classList.add('on')}
+document.querySelectorAll('.t[data-i]').forEach(t=>{t.tabIndex=0;t.setAttribute('role','button');if(!t.getAttribute('aria-label'))t.setAttribute('aria-label','Foto öffnen');
+  t.onclick=()=>show(all.indexOf(t.dataset.i));t.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t.onclick()}}});
+$('lbx').onclick=()=>lb.classList.remove('on');
+$('lbp').onclick=()=>show(cur-1);$('lbn').onclick=()=>show(cur+1);
+const ag=$('allg'),agi=$('allgIn');
+const AR={"oldparking":1.554,"23":1.498,"28":1.498,"26":1.498,"19":1.498,"31":1.498,"18":1.498,"12":1.498,"16":0.668,"3":1.498,"33":1.498,"35":0.668,"2":0.668,"6":0.668,"8":1.498,"50":0.668,"51":0.668,"11":0.668,"39":0.668,"37":1.498,"twin":1.498,"oldtwin":1.493,"43":0.668,"45":0.668,"38":1.498,"77":1.498,"78":1.498,"70":1.498,"71":1.498,"74":1.498,"91":1.498,"93":1.498,"83":1.498,"81":1.498,"86":0.668,"95":0.668,"97":1.498,"101":1.498,"100":0.668,"57":1.498,"56":1.498,"62":1.498,"63":1.498,"67":1.498,"49":1.498,"58":1.498,"59":1.498,"65":0.668,"68":1.498,"105":1.498,"106":1.498,"107":1.498,"109":1.498,"115":1.498,"117":1.498,"119":1.498,"103":1.498,"112":1.498,"143":1.779,"136":1.779,"140":1.779,"120":1.779,"132":1.779,"130":1.779,"121":1.779,"137":1.779,"129":1.779,"124":0.562,"126":0.562,"138":0.562,"beach":1.782,"town":1.782,"villaroute2-de":1.273};
+agi.innerHTML=groups.map(g=>'<h4>'+g[0]+'</h4><div class="g">'+g[1].map(n=>'<img loading="lazy" src="img/th/'+n+'.jpg" data-n="'+n+'" alt="" tabindex="0">').join('')+'</div>').join('')+'<div style="height:60px"></div>';
+function justify(){agi.querySelectorAll('.g').forEach(box=>{
+  const cs=getComputedStyle(box),W=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-1,gap=parseFloat(cs.columnGap)||8,H=W<700?170:260;
+  const ims=[...box.children];const rows=[];let row=[],sum=0;
+  ims.forEach(im=>{const a=AR[im.dataset.n]||1.5;row.push([im,a]);sum+=a;if(sum*H+gap*(row.length-1)>=W){rows.push(row);row=[];sum=0}});
+  if(row.length){if(rows.length&&row.reduce((s,r)=>s+r[1],0)*H<W*0.5)rows[rows.length-1].push(...row);else rows.push(row)}
+  rows.forEach(r=>{const s=r.reduce((t,x)=>t+x[1],0),rh=Math.floor((W-gap*(r.length-1))/s);let used=0;
+    r.forEach(([im,a],i)=>{const w=i==r.length-1?W-gap*(r.length-1)-used:Math.floor(a*rh);used+=w;im.style.width=w+'px';im.style.height=rh+'px'})})})}
+addEventListener('resize',()=>{if(ag.classList.contains('on'))justify()});
+agi.querySelectorAll('img').forEach(i=>{i.onclick=()=>show(all.indexOf(i.dataset.n));i.onkeydown=e=>{if(e.key==='Enter')i.onclick()}});
+const closeAll=()=>{ag.classList.remove('on');document.body.style.overflow=''};
+$('openAll').onclick=()=>{ag.classList.add('on');document.body.style.overflow='hidden';justify()};
+$('closeAll').onclick=closeAll;
+document.addEventListener('keydown',e=>{
+  if(lb.classList.contains('on')){if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);return}
+  if(e.key==='Escape'){if(ag.classList.contains('on'))closeAll();closeMenu()}});
+/* mobile menu */
+const mnav=$('mnav'),mb=$('menuBtn');
+function closeMenu(){mnav.classList.remove('on');mb.setAttribute('aria-expanded','false');mnav.setAttribute('aria-hidden','true');if(!ag.classList.contains('on'))document.body.style.overflow=''}
+mb.onclick=()=>{mnav.classList.add('on');mb.setAttribute('aria-expanded','true');mnav.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+$('menuClose').onclick=closeMenu;mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+/* active nav link */
+const links=[...document.querySelectorAll('nav ul a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+addEventListener('scroll',()=>{let y=scrollY+150,on=links[0];secs.forEach((s,i)=>{if(s.offsetTop<=y)on=links[i]});links.forEach(a=>a.classList.toggle('on',a===on))},{passive:true});
+</script>
+</body></html>
