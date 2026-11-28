@@ -185,7 +185,7 @@ footer button:hover{color:#fff}
 .allg.on{display:block}
 .allg .head .logo{font-size:22px!important}
 .allg .head{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;z-index:2}
-.allg h4{font:400 30px "Prata";margin:44px 40px 20px}
+.allg h4{font:400 30px "Prata";margin:64px 40px 30px}
 .allg .g{display:flex;flex-wrap:wrap;gap:8px;padding:0 40px}
 .allg .g img{display:block;flex:none;object-fit:cover;cursor:zoom-in;border-radius:3px}
 /* responsive */
@@ -215,7 +215,7 @@ footer button:hover{color:#fff}
  summary{padding:20px 22px;font-size:16.5px}details{border-radius:16px;margin-bottom:12px}details p{padding:14px 20px 6px 50px;font-size:16px}details p:before{left:22px;top:12px}
  .contact .wrap{grid-template-columns:1fr;gap:40px}
  .lb .stage{padding:0 10px 20px}.lb .nav{display:none}
- .allg .g{padding:0 14px;gap:6px}.allg h4{margin:30px 14px 14px;font-size:24px}.allg .head .logo{font-size:22px!important}
+ .allg .g{padding:0 14px;gap:6px}.allg h4{margin:44px 14px 20px;font-size:24px}.allg .head .logo{font-size:22px!important}
 .allg .head{padding:14px}
 }
 
@@ -373,7 +373,7 @@ footer button:hover{color:#fff}
     <div class="fact"><div class="yr">Today</div><h4>Family holidays</h4><p>The town and the area are oriented to family tourism, with numerous private and hotel accommodation and two marinas welcoming nautical visitors.</p></div>
   </div>
   <div class="strip">
-    <div class="t" data-i="beach"><img src="img/th/beach.jpg" alt="Rocky beach and clear water near Novi Vinodolski"></div>
+    <div class="t" data-i="beach2"><img src="img/th/beach2.jpg" alt="Rocky beach and clear water near Novi Vinodolski"></div>
     <div class="t" data-i="126"><img src="img/full/126.jpg" alt="The coastline of Novi Vinodolski from above"></div>
     <div class="t" data-i="town"><img src="img/th/town.jpg" alt="Novi Vinodolski harbour and old town"></div>
   </div>
@@ -435,7 +435,7 @@ footer button:hover{color:#fff}
 <div class="lb" id="lb"><div class="bar"><span id="lbc"></span><button class="x" id="lbx" aria-label="Close">✕</button></div><div class="stage"><button class="nav prev" id="lbp" aria-label="Previous">←</button><img id="lbi" alt=""><button class="nav next" id="lbn" aria-label="Next">→</button></div></div>
 
 <script>
-const groups=[["Upper apartment",["23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39"]],["Bedrooms",["37","twin","oldtwin","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Parking, beach and town",["oldparking","beach","town","villaroute2"]]];
+const groups=[["Upper apartment",["23","28","26","19","31","18","12","16","3","33","35","2","6","8","50","51","11","39"]],["Bedrooms",["37","twin","oldtwin","43","45","38","77","78"]],["Lower apartment",["70","71","74","91","93","83","81","86","95","97","101","100"]],["Garden",["57","56","62","63","67","49","58","59","65","68"]],["Roof terrace",["105","106","107","109","115","117","119","103","112","143"]],["From above",["136","140","120","132","130","121","137","129","124","126","138"]],["Parking, beach and town",["oldparking","beach2","town","villaroute2"]]];
 const all=groups.flatMap(g=>g[1]);let cur=0;
 const $=id=>document.getElementById(id);
 const lb=$('lb'),lbi=$('lbi'),lbc=$('lbc');
@@ -445,7 +445,7 @@ document.querySelectorAll('.t[data-i]').forEach(t=>{t.tabIndex=0;t.setAttribute(
 $('lbx').onclick=()=>lb.classList.remove('on');
 $('lbp').onclick=()=>show(cur-1);$('lbn').onclick=()=>show(cur+1);
 const ag=$('allg'),agi=$('allgIn');
-const AR={"oldparking":1.554,"23":1.498,"28":1.498,"26":1.498,"19":1.498,"31":1.498,"18":1.498,"12":1.498,"16":0.668,"3":1.498,"33":1.498,"35":0.668,"2":0.668,"6":0.668,"8":1.498,"50":0.668,"51":0.668,"11":0.668,"39":0.668,"37":1.498,"twin":1.498,"oldtwin":1.493,"43":0.668,"45":0.668,"38":1.498,"77":1.498,"78":1.498,"70":1.498,"71":1.498,"74":1.498,"91":1.498,"93":1.498,"83":1.498,"81":1.498,"86":0.668,"95":0.668,"97":1.498,"101":1.498,"100":0.668,"57":1.498,"56":1.498,"62":1.498,"63":1.498,"67":1.498,"49":1.498,"58":1.498,"59":1.498,"65":0.668,"68":1.498,"105":1.498,"106":1.498,"107":1.498,"109":1.498,"115":1.498,"117":1.498,"119":1.498,"103":1.498,"112":1.498,"143":1.779,"136":1.779,"140":1.779,"120":1.779,"132":1.779,"130":1.779,"121":1.779,"137":1.779,"129":1.779,"124":0.562,"126":0.562,"138":0.562,"beach":1.782,"town":1.782,"villaroute2":1.273};
+const AR={"oldparking":1.554,"23":1.498,"28":1.498,"26":1.498,"19":1.498,"31":1.498,"18":1.498,"12":1.498,"16":0.668,"3":1.498,"33":1.498,"35":0.668,"2":0.668,"6":0.668,"8":1.498,"50":0.668,"51":0.668,"11":0.668,"39":0.668,"37":1.498,"twin":1.498,"oldtwin":1.493,"43":0.668,"45":0.668,"38":1.498,"77":1.498,"78":1.498,"70":1.498,"71":1.498,"74":1.498,"91":1.498,"93":1.498,"83":1.498,"81":1.498,"86":0.668,"95":0.668,"97":1.498,"101":1.498,"100":0.668,"57":1.498,"56":1.498,"62":1.498,"63":1.498,"67":1.498,"49":1.498,"58":1.498,"59":1.498,"65":0.668,"68":1.498,"105":1.498,"106":1.498,"107":1.498,"109":1.498,"115":1.498,"117":1.498,"119":1.498,"103":1.498,"112":1.498,"143":1.779,"136":1.779,"140":1.779,"120":1.779,"132":1.779,"130":1.779,"121":1.779,"137":1.779,"129":1.779,"124":0.562,"126":0.562,"138":0.562,"beach2":1.782,"town":1.782,"villaroute2":1.273};
 agi.innerHTML=groups.map(g=>'<h4>'+g[0]+'</h4><div class="g">'+g[1].map(n=>'<img loading="lazy" src="img/th/'+n+'.jpg" data-n="'+n+'" alt="" tabindex="0">').join('')+'</div>').join('')+'<div style="height:60px"></div>';
 function justify(){agi.querySelectorAll('.g').forEach(box=>{
   const cs=getComputedStyle(box),W=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-1,gap=parseFloat(cs.columnGap)||8,H=W<700?170:260;
