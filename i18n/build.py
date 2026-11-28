@@ -9,8 +9,8 @@ import re
 import sys
 
 T = json.load(open('i18n/translations.json', encoding='utf-8'))
-PAGES = {'index.html': {'de': 'de.html', 'it': 'it.html'},
-         'privacy.html': {'de': 'privacy-de.html', 'it': 'privacy-it.html'}}
+PAGES = {'index.html': {'de': 'de.html', 'it': 'it.html', 'hr': 'hr.html'},
+         'privacy.html': {'de': 'privacy-de.html', 'it': 'privacy-it.html', 'hr': 'privacy-hr.html'}}
 missing = set()
 
 
